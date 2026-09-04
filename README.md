@@ -1,47 +1,119 @@
-<!-- Enterprise Modern Light Theme Layout Engine -->
+---
+---
+<!-- Enterprise Celestial Layout Framework -->
 <style>
-  /* Force hide GitHub Pages theme defaults */
-  header.page-header, .page-header, .site-header {
+  /* Suppress default GitHub theme banners and title injections */
+  header.page-header, .page-header, .site-header, #project_title, .project-name {
     display: none !important;
   }
 
   html {
     scroll-behavior: smooth !important;
-    background-color: #f8fafc !important;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
-    color: #0f172a !important;
+    background-color: #020617 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif !important;
+    color: #f8fafc !important;
     letter-spacing: -0.1px;
     overflow-x: hidden;
   }
   
   body {
     max-width: 1140px !important;
-    padding: 30px 20px !important;
+    padding: 30px 20px 60px 20px !important;
     margin: 0 auto !important;
-    background-color: #f8fafc !important;
+    background-color: #020617 !important;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.08) 0px, transparent 55%),
+      radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.06) 0px, transparent 55%),
+      radial-gradient(at 50% 100%, rgba(15, 23, 42, 0.98) 0px, transparent 75%) !important;
+    background-attachment: fixed !important;
     position: relative;
   }
   
   .main-content {
     max-width: 100% !important;
     padding: 0 !important;
+    position: relative;
+    z-index: 2;
     box-sizing: border-box !important;
   }
 
-  /* Clean Minimalist Hero Card */
+  /* Celestial Dynamic Background */
+  .space-canvas {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    pointer-events: none !important;
+    z-index: -1 !important;
+    overflow: hidden !important;
+    background-image: 
+      radial-gradient(1.2px 1.2px at 15px 25px, #ffffff, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 45px 90px, #ffffff, rgba(0,0,0,0)),
+      radial-gradient(1.5px 1.5px at 110px 65px, #ffffff, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 210px 140px, #7dd3fc, rgba(0,0,0,0)),
+      radial-gradient(1.2px 1.2px at 190px 240px, #ffffff, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 310px 380px, #ffffff, rgba(0,0,0,0)),
+      radial-gradient(1.5px 1.5px at 420px 95px, #a5b4fc, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 580px 210px, #ffffff, rgba(0,0,0,0)),
+      radial-gradient(1.2px 1.2px at 690px 130px, #ffffff, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 810px 80px, #7dd3fc, rgba(0,0,0,0)),
+      radial-gradient(1.8px 1.8px at 890px 320px, #ffffff, rgba(0,0,0,0)),
+      radial-gradient(1.2px 1.2px at 1050px 190px, #ffffff, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 35px 280px, #ffffff, rgba(0,0,0,0)),
+      radial-gradient(1.5px 1.5px at 145px 420px, #ffffff, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 280px 510px, #a5b4fc, rgba(0,0,0,0)),
+      radial-gradient(1.2px 1.2px at 490px 320px, #ffffff, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 670px 460px, #ffffff, rgba(0,0,0,0)),
+      radial-gradient(1.5px 1.5px at 830px 240px, #7dd3fc, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 960px 490px, #ffffff, rgba(0,0,0,0)),
+      radial-gradient(1.2px 1.2px at 1110px 410px, #ffffff, rgba(0,0,0,0)) !important;
+    background-repeat: repeat !important;
+    background-size: 400px 400px !important;
+    opacity: 0.85;
+    animation: celestialShimmer 4s ease-in-out infinite alternate !important;
+  }
+
+  @keyframes celestialShimmer {
+    0% { opacity: 0.65; }
+    100% { opacity: 0.90; }
+  }
+
+  .diagonal-shooting-star {
+    position: absolute !important;
+    height: 1.5px;
+    background: linear-gradient(-45deg, #ffffff, rgba(56, 189, 248, 0));
+    filter: drop-shadow(0 0 8px #60a5fa);
+    opacity: 0;
+  }
+
+  .star-d1 { top: -60px; left: 3%;   width: 130px; animation: diagonalStreak 1.8s linear infinite !important; animation-delay: 0.1s !important; }
+  .star-d2 { top: -60px; left: 20%;  width: 160px; animation: diagonalStreak 2.5s linear infinite !important; animation-delay: 1.2s !important; }
+  .star-d3 { top: -60px; left: 38%;  width: 115px; animation: diagonalStreak 2.1s linear infinite !important; animation-delay: 0.5s !important; }
+  .star-d4 { top: -60px; left: 55%;  width: 150px; animation: diagonalStreak 2.9s linear infinite !important; animation-delay: 1.8s !important; }
+  .star-d5 { top: -60px; left: 72%;  width: 135px; animation: diagonalStreak 2.3s linear infinite !important; animation-delay: 0.2s !important; }
+  .star-d6 { top: -60px; left: 88%;  width: 145px; animation: diagonalStreak 2.6s linear infinite !important; animation-delay: 0.9s !important; }
+  .star-d7 { top: -60px; left: 96%;  width: 120px; animation: diagonalStreak 2.2s linear infinite !important; animation-delay: 1.4s !important; }
+
+  @keyframes diagonalStreak {
+    0% { transform: translateX(0) translateY(0) rotate(-45deg); opacity: 0; }
+    3% { opacity: 1; }
+    22% { transform: translateX(-550px) translateY(500px) rotate(-45deg); opacity: 0; }
+    100% { transform: translateX(-550px) translateY(500px) rotate(-45deg); opacity: 0; }
+  }
+
+  /* Header Card */
   .custom-portfolio-header {
-    background: #ffffff !important;
-    padding: 4.5rem 2rem 4rem 2rem !important;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.45) 0%, rgba(30, 41, 59, 0.2) 100%) !important;
+    backdrop-filter: blur(24px) !important;
+    -webkit-backdrop-filter: blur(24px) !important;
+    padding: 5rem 2rem 4rem 2rem !important;
     text-align: center !important;
-    border-radius: 20px !important;
-    box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08) !important;
-    border: 1px solid #e2e8f0 !important;
+    border-radius: 24px !important;
+    box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
     margin-top: 10px !important;
-    margin-bottom: 35px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
+    margin-bottom: 40px !important;
   }
   
   .name-word-group {
@@ -50,38 +122,33 @@
   }
 
   .typewriter-title {
-    color: #0f172a !important;
+    color: #ffffff !important;
     font-size: 38px !important;
     font-weight: 800 !important;
-    letter-spacing: -0.8px !important;
+    letter-spacing: -0.6px !important;
     margin: 0 !important;
     text-align: center !important;
     line-height: 1.25;
-    min-height: 48px;
   }
 
   .typewriter-tagline {
-    color: #64748b !important;
+    color: #94a3b8 !important;
     font-size: 12px !important;
     font-weight: 700 !important;
     text-transform: uppercase !important;
-    letter-spacing: 2px !important;
-    margin: 14px 0 0 0 !important;
+    letter-spacing: 3px !important;
+    margin: 16px 0 0 0 !important;
     text-align: center !important;
-    line-height: 1.5;
-    width: 100% !important;
-    display: block !important;
   }
 
   .blinking-cursor {
     display: inline-block !important;
-    color: #2563eb !important; 
+    color: #38bdf8 !important; 
     font-weight: 800 !important;
     font-size: 36px !important;
     animation: pulseCursor 0.8s step-end infinite !important;
     vertical-align: baseline !important;
     margin-left: 2px !important;
-    line-height: 1 !important;
   }
 
   @keyframes pulseCursor {
@@ -89,7 +156,7 @@
     50% { opacity: 1; }
   }
 
-  /* Minimalist Clean Navigation Dock */
+  /* Navigation Dock */
   .nav-container {
     position: -webkit-sticky;
     position: sticky;
@@ -97,20 +164,20 @@
     z-index: 999;
     display: flex;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.92);
-    -webkit-backdrop-filter: blur(16px);
-    backdrop-filter: blur(16px);
+    background-color: rgba(3, 7, 18, 0.8);
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
     padding: 6px;
     border-radius: 40px;
-    border: 1px solid #cbd5e1;
-    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.8);
     margin-bottom: 60px;
   }
 
   .nav-btn {
     position: relative !important;
     white-space: nowrap !important;
-    color: #475569 !important;
+    color: #94a3b8 !important;
     padding: 10px 20px !important;
     border-radius: 30px !important;
     text-decoration: none !important;
@@ -121,21 +188,18 @@
   }
   
   .nav-btn:hover {
-    color: #0f172a !important;
-    background-color: #f1f5f9 !important;
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
   }
 
-  /* Modern Solid Clean Surface Cards */
+  /* Frosted Modern Cards */
   .premium-card {
-    background: #ffffff !important;
-    border: 1px solid #e2e8f0 !important;
-    box-shadow: 0 8px 24px -6px rgba(15, 23, 42, 0.05) !important;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  }
-  
-  .premium-card:hover {
-    box-shadow: 0 16px 36px -8px rgba(15, 23, 42, 0.09) !important;
-    border-color: #cbd5e1 !important;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.5) 0%, rgba(30, 41, 59, 0.25) 100%) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.6) !important;
+    transition: all 0.3s ease !important;
   }
   
   .badge-btn {
@@ -145,7 +209,7 @@
   }
   .badge-btn:hover {
     transform: translateY(-2px) !important;
-    filter: brightness(0.96);
+    filter: brightness(1.15);
   }
 
   .section-title-wrapper {
@@ -170,14 +234,14 @@
     display: inline-block;
   }
 
-  /* Fixed Clean High-Contrast Usability Table */
+  /* Deep Space Diagnostic Table */
   .audit-table-wrapper {
     width: 100% !important;
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch !important;
     border-radius: 12px !important;
-    background: #ffffff !important;
-    border: 1px solid #e2e8f0 !important;
+    background: rgba(15, 23, 42, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
     margin-top: 20px !important;
   }
 
@@ -186,20 +250,19 @@
     min-width: 700px !important;
     border-collapse: collapse !important;
     font-size: 13.5px !important;
-    color: #334155 !important;
-    background: #ffffff !important;
+    color: #cbd5e1 !important;
   }
   .audit-table th {
     text-align: left !important;
     padding: 14px 18px !important;
-    background: #f8fafc !important;
-    color: #0f172a !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    color: #ffffff !important;
     font-weight: 700 !important;
-    border-bottom: 1px solid #e2e8f0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
   }
   .audit-table td {
     padding: 14px 18px !important;
-    border-bottom: 1px solid #f1f5f9 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
     line-height: 1.6 !important;
   }
 
@@ -210,9 +273,9 @@
     left: 0 !important;
     width: 100% !important;
     height: 100% !important;
-    background-color: rgba(15, 23, 42, 0.75) !important;
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
+    background-color: rgba(3, 7, 18, 0.94) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
     z-index: 10000 !important;
     display: none !important;
     align-items: center !important;
@@ -238,10 +301,8 @@
     max-height: 100% !important;
     object-fit: contain !important;
     user-select: none !important;
-    -webkit-user-drag: none !important;
-    transition: transform 0.25s ease !important;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3) !important;
     cursor: zoom-in !important;
+    transition: transform 0.25s ease !important;
   }
 
   .video-modal-window {
@@ -251,8 +312,7 @@
     padding-bottom: 45% !important;
     background-color: #000000 !important;
     border-radius: 16px !important;
-    border: 1px solid #334155 !important;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
     overflow: hidden !important;
     position: relative !important;
   }
@@ -269,44 +329,39 @@
   .report-modal-window {
     width: 85vw !important;
     height: 85vh !important;
-    background-color: #ffffff !important;
+    background-color: #0f172a !important;
     border-radius: 16px !important;
-    border: 1px solid #cbd5e1 !important;
-    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
     overflow: hidden !important;
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
     position: relative !important;
   }
   .report-frame {
     width: 100% !important;
     height: 100% !important;
     border: none !important;
-    background: #ffffff !important;
+    background: #0f172a !important;
   }
 
   .custom-modal-close-btn {
     position: fixed !important;
     top: 25px !important;
     right: 35px !important;
-    background: #ffffff !important;
-    border: 1px solid #cbd5e1 !important;
-    color: #0f172a !important;
+    background: rgba(15, 23, 42, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #94a3b8 !important;
     font-size: 22px !important;
     width: 40px !important;
     height: 40px !important;
-    border-radius: 50% !important;
+    border-radius: 50%;
     cursor: pointer !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
     z-index: 10001 !important;
   }
 
-  /* Responsive Adjustments */
   @media (max-width: 768px) {
     body { padding-top: 10px !important; padding-bottom: 20px !important; }
     .custom-portfolio-header, #who-i-am, #projects-overview, #case-study-laundrify, #case-study-1-ergochef, #case-study-2-elearn-ux-audit, #case-study-ezshop {
@@ -317,7 +372,6 @@
     .nav-container {
       justify-content: flex-start !important;
       overflow-x: auto !important;
-      -webkit-overflow-scrolling: touch !important;
       border-radius: 0px !important;
       padding: 6px !important;
       margin-bottom: 30px;
@@ -327,9 +381,20 @@
   }
 </style>
 
+<!-- Canvas Layers -->
+<div class="space-canvas">
+  <div class="diagonal-shooting-star star-d1"></div>
+  <div class="diagonal-shooting-star star-d2"></div>
+  <div class="diagonal-shooting-star star-d3"></div>
+  <div class="diagonal-shooting-star star-d4"></div>
+  <div class="diagonal-shooting-star star-d5"></div>
+  <div class="diagonal-shooting-star star-d6"></div>
+  <div class="diagonal-shooting-star star-d7"></div>
+</div>
+
 <div class="main-content">
 
-  <!-- Minimalist Hero Header (No Repo Title / No Awkward Lines / No Walkthrough Button) -->
+  <!-- Clean Top Profile Display -->
   <div class="custom-portfolio-header">
     <h1 class="typewriter-title">
       <span class="name-word-group" id="js-type-name-1"></span> 
@@ -339,50 +404,50 @@
     <h2 id="js-type-tagline" class="typewriter-tagline"></h2>
   </div>
 
-  <!-- Clean Navigation Dock (Challenges & Submission Removed) -->
+  <!-- Focused Navigation Dock -->
   <div class="nav-container">
     <a href="#who-i-am" class="nav-btn">Profile</a>
-    <a href="#projects-overview" class="nav-btn">Projects</a>
+    <a href="#projects-overview" class="nav-btn">Directory</a>
     <a href="#case-study-laundrify" class="nav-btn">Laundrify (FYP)</a>
+    <a href="#case-study-ezshop" class="nav-btn">EZShop</a>
     <a href="#case-study-1-ergochef" class="nav-btn">ErgoChef+</a>
     <a href="#case-study-2-elearn-ux-audit" class="nav-btn">eLearn Audit</a>
-    <a href="#case-study-ezshop" class="nav-btn">EZShop</a>
   </div>
 
   <!-- Profile Section -->
   <div id="who-i-am" style="padding-top: 10px; margin-bottom: 60px;">
     <div class="section-title-wrapper">
-      <div class="section-bar" style="background: #2563eb;"></div>
-      <h2 style="color: #0f172a; font-size: 24px; font-weight: 700; margin: 0;">Profile Overview</h2>
+      <div class="section-bar" style="background: #38bdf8;"></div>
+      <h2 style="color: #ffffff; font-size: 24px; font-weight: 700; margin: 0;">Introduction</h2>
     </div>
     
     <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 24px;">
-      <div class="premium-card" style="flex: 2; min-width: 320px; border-radius: 16px; padding: 36px; display: flex; gap: 30px; align-items: center; flex-wrap: wrap;">
-        <div style="flex-shrink: 0;">
-          <img src="https://raw.githubusercontent.com/malcolmjeremiah/malcolmjeremiah.github.io/main/WhatsApp%20Image%202026-07-03%20at%2010.14.22%20PM.jpeg" alt="Malcolm Jeremiah Richard" style="width: 105px; height: 105px; border-radius: 50%; object-fit: cover; border: 3px solid #e2e8f0;" />
+      <div class="premium-card" style="flex: 2; min-width: 320px; border-radius: 20px; padding: 36px; display: flex; gap: 30px; align-items: center; flex-wrap: wrap;">
+        <div style="position: relative; flex-shrink: 0;">
+          <img src="https://raw.githubusercontent.com/malcolmjeremiah/malcolmjeremiah.github.io/main/WhatsApp%20Image%202026-07-03%20at%2010.14.22%20PM.jpeg" alt="Malcolm Jeremiah Richard" style="width: 105px; height: 105px; border-radius: 50%; object-fit: cover; border: 3px solid #38bdf8;" />
         </div>
         <div style="flex: 1; min-width: 240px;">
-          <p style="font-size: 15.5px; line-height: 1.8; color: #334155; margin: 0; font-weight: 400;">
-            Recent <strong>Information Technology</strong> graduate with hands-on experience in full-stack web development, enterprise automation, and systems architecture gained through corporate internship work at Maybank. Practical background in designing scalable databases, scripting operational automation tools, and applying foundational networking and cybersecurity practices.
+          <p style="font-size: 15px; line-height: 1.8; color: #cbd5e1; margin: 0;">
+            Information Technology graduate with practical experience across full-stack software development, relational databases, and enterprise automation gained through internship work at Maybank. Focused on building robust backend systems, reliable APIs, and automated operational pipelines, with a solid commitment to cybersecurity fundamentals, network infrastructure, and continuous technical growth.
           </p>
         </div>
       </div>
 
-      <div class="premium-card" style="flex: 1; min-width: 280px; border-radius: 16px; padding: 30px; display: flex; flex-direction: column; justify-content: center;">
-        <h4 style="margin-top: 0; margin-bottom: 14px; color: #64748b; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;">Core Stack & Scripting</h4>
+      <div class="premium-card" style="flex: 1; min-width: 280px; border-radius: 20px; padding: 30px; display: flex; flex-direction: column; justify-content: center;">
+        <h4 style="margin-top: 0; margin-bottom: 14px; color: #94a3b8; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;">Core Stack & Scripting</h4>
         <div style="margin-bottom: 20px; display: flex; flex-wrap: wrap; gap: 8px;">
-          <span style="font-size: 12px; font-weight: 600; background-color: #f1f5f9; color: #2563eb; padding: 5px 12px; border-radius: 16px; border: 1px solid #e2e8f0;">Python</span>
-          <span style="font-size: 12px; font-weight: 600; background-color: #f1f5f9; color: #334155; padding: 5px 12px; border-radius: 16px; border: 1px solid #e2e8f0;">PHP</span>
-          <span style="font-size: 12px; font-weight: 600; background-color: #f1f5f9; color: #334155; padding: 5px 12px; border-radius: 16px; border: 1px solid #e2e8f0;">JavaScript</span>
-          <span style="font-size: 12px; font-weight: 600; background-color: #f1f5f9; color: #334155; padding: 5px 12px; border-radius: 16px; border: 1px solid #e2e8f0;">SQL</span>
-          <span style="font-size: 12px; font-weight: 600; background-color: #f1f5f9; color: #334155; padding: 5px 12px; border-radius: 16px; border: 1px solid #e2e8f0;">Power Automate</span>
+          <span style="font-size: 12px; font-weight: 600; background-color: rgba(255,255,255,0.04); color: #38bdf8; padding: 5px 12px; border-radius: 16px; border: 1px solid rgba(56,189,248,0.2);">Python</span>
+          <span style="font-size: 12px; font-weight: 600; background-color: rgba(255,255,255,0.04); color: #e2e8f0; padding: 5px 12px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08);">PHP</span>
+          <span style="font-size: 12px; font-weight: 600; background-color: rgba(255,255,255,0.04); color: #e2e8f0; padding: 5px 12px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08);">JavaScript</span>
+          <span style="font-size: 12px; font-weight: 600; background-color: rgba(255,255,255,0.04); color: #e2e8f0; padding: 5px 12px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08);">SQL</span>
+          <span style="font-size: 12px; font-weight: 600; background-color: rgba(255,255,255,0.04); color: #e2e8f0; padding: 5px 12px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08);">Power Automate</span>
         </div>
-        <h4 style="margin-top: 0; margin-bottom: 14px; color: #64748b; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;">Databases & Tools</h4>
+        <h4 style="margin-top: 0; margin-bottom: 14px; color: #94a3b8; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;">Infrastructure & Databases</h4>
         <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-          <span style="font-size: 12px; font-weight: 600; background-color: #f1f5f9; color: #0284c7; padding: 5px 12px; border-radius: 16px; border: 1px solid #e2e8f0;">MySQL</span>
-          <span style="font-size: 12px; font-weight: 600; background-color: #f1f5f9; color: #334155; padding: 5px 12px; border-radius: 16px; border: 1px solid #e2e8f0;">RESTful APIs</span>
-          <span style="font-size: 12px; font-weight: 600; background-color: #f1f5f9; color: #334155; padding: 5px 12px; border-radius: 16px; border: 1px solid #e2e8f0;">Git / GitHub</span>
-          <span style="font-size: 12px; font-weight: 600; background-color: #f1f5f9; color: #334155; padding: 5px 12px; border-radius: 16px; border: 1px solid #e2e8f0;">Cisco Packet Tracer</span>
+          <span style="font-size: 12px; font-weight: 600; background-color: rgba(255,255,255,0.04); color: #a5b4fc; padding: 5px 12px; border-radius: 16px; border: 1px solid rgba(165,180,252,0.2);">MySQL</span>
+          <span style="font-size: 12px; font-weight: 600; background-color: rgba(255,255,255,0.04); color: #cbd5e1; padding: 5px 12px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08);">RESTful APIs</span>
+          <span style="font-size: 12px; font-weight: 600; background-color: rgba(255,255,255,0.04); color: #cbd5e1; padding: 5px 12px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08);">Git / GitHub</span>
+          <span style="font-size: 12px; font-weight: 600; background-color: rgba(255,255,255,0.04); color: #cbd5e1; padding: 5px 12px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08);">Cisco Packet Tracer</span>
         </div>
       </div>
     </div>
@@ -391,141 +456,222 @@
   <!-- Projects Directory Overview -->
   <div id="projects-overview" style="padding-top: 10px; margin-bottom: 60px;">
     <div class="section-title-wrapper">
-      <div class="section-bar" style="background: #0284c7;"></div>
-      <h2 style="color: #0f172a; font-size: 24px; font-weight: 700; margin: 0;">Featured Projects</h2>
+      <div class="section-bar" style="background: #10b981;"></div>
+      <h2 style="color: #ffffff; font-size: 24px; font-weight: 700; margin: 0;">Featured Projects Directory</h2>
     </div>
     
     <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 20px;">
       
-      <!-- Laundrify Card -->
-      <div class="premium-card" style="flex: 1; min-width: 260px; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; border-top: 4px solid #10b981 !important;">
+      <!-- Laundrify -->
+      <div class="premium-card" style="flex: 1; min-width: 260px; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; border-left: 3px solid #10b981 !important;">
         <div>
-          <span class="pill-metric" style="background-color: #ecfdf5; color: #059669; border: 1px solid #a7f3d0;">Final Year Project</span>
-          <h3 style="margin: 16px 0 10px 0; font-size: 19px; color: #0f172a; font-weight: 700;">Laundrify Platform</h3>
-          <p style="font-size: 14px; line-height: 1.6; color: #64748b; margin: 0 0 24px 0;">Cloud-deployed booking ecosystem with RESTful APIs, role-based auth, and automated operational pipelines.</p>
+          <span class="pill-metric" style="background-color: rgba(16, 185, 129, 0.1); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.2);">Individual FYP</span>
+          <h3 style="margin: 16px 0 10px 0; font-size: 19px; color: #ffffff; font-weight: 700;">Laundrify Platform</h3>
+          <p style="font-size: 14px; line-height: 1.6; color: #94a3b8; margin: 0 0 24px 0;">Cloud-deployed service backend featuring automated pricing algorithms, transactional state pipelines, and RBAC authentication.</p>
         </div>
-        <div style="border-top: 1px solid #f1f5f9; padding-top: 16px;">
-          <a href="#case-study-laundrify" style="font-size: 13.5px; font-weight: 700; color: #059669; text-decoration: none;">View Details →</a>
+        <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 16px;">
+          <a href="#case-study-laundrify" style="font-size: 13.5px; font-weight: 700; color: #6ee7b7; text-decoration: none;">Deep Dive Details →</a>
         </div>
       </div>
 
-      <!-- ErgoChef+ Card -->
-      <div class="premium-card" style="flex: 1; min-width: 260px; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; border-top: 4px solid #ea580c !important;">
+      <!-- EZShop -->
+      <div class="premium-card" style="flex: 1; min-width: 260px; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; border-left: 3px solid #818cf8 !important;">
         <div>
-          <span class="pill-metric" style="background-color: #fff7ed; color: #ea580c; border: 1px solid #fed7aa;">Interactive Prototype</span>
-          <h3 style="margin: 16px 0 10px 0; font-size: 19px; color: #0f172a; font-weight: 700;">ErgoChef+ Assistant</h3>
-          <p style="font-size: 14px; line-height: 1.6; color: #64748b; margin: 0 0 24px 0;">Context-aware kitchen guidance using posture detection models and progressive overlay UI notifications.</p>
+          <span class="pill-metric" style="background-color: rgba(129, 140, 248, 0.1); color: #a5b4fc; border: 1px solid rgba(129, 140, 248, 0.2);">Web Platform</span>
+          <h3 style="margin: 16px 0 10px 0; font-size: 19px; color: #ffffff; font-weight: 700;">EZShop Platform</h3>
+          <p style="font-size: 14px; line-height: 1.6; color: #94a3b8; margin: 0 0 24px 0;">Relational e-commerce web platform engineered with session security, live inventory management, and query indexing.</p>
         </div>
-        <div style="border-top: 1px solid #f1f5f9; padding-top: 16px;">
-          <a href="#case-study-1-ergochef" style="font-size: 13.5px; font-weight: 700; color: #ea580c; text-decoration: none;">View Details →</a>
+        <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 16px;">
+          <a href="#case-study-ezshop" style="font-size: 13.5px; font-weight: 700; color: #a5b4fc; text-decoration: none;">Deep Dive Details →</a>
+        </div>
+      </div>
+
+      <!-- ErgoChef+ -->
+      <div class="premium-card" style="flex: 1; min-width: 260px; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; border-left: 3px solid #f97316 !important;">
+        <div>
+          <span class="pill-metric" style="background-color: rgba(249, 115, 22, 0.1); color: #fdba74; border: 1px solid rgba(249, 115, 22, 0.2);">Prototype</span>
+          <h3 style="margin: 16px 0 10px 0; font-size: 19px; color: #ffffff; font-weight: 700;">ErgoChef+ Assistant</h3>
+          <p style="font-size: 14px; line-height: 1.6; color: #94a3b8; margin: 0 0 24px 0;">Context-aware kitchen ergonomics utilizing posture detection telemetry and non-intrusive alert HUD overlays.</p>
+        </div>
+        <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 16px;">
+          <a href="#case-study-1-ergochef" style="font-size: 13.5px; font-weight: 700; color: #fdba74; text-decoration: none;">Deep Dive Details →</a>
         </div>
       </div>
       
-      <!-- eLearn Card -->
-      <div class="premium-card" style="flex: 1; min-width: 260px; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; border-top: 4px solid #0284c7 !important;">
+      <!-- eLearn -->
+      <div class="premium-card" style="flex: 1; min-width: 260px; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; border-left: 3px solid #38bdf8 !important;">
         <div>
-          <span class="pill-metric" style="background-color: #f0f9ff; color: #0284c7; border: 1px solid #bae6fd;">Heuristic Audit</span>
-          <h3 style="margin: 16px 0 10px 0; font-size: 19px; color: #0f172a; font-weight: 700;">eLearn UX Audit</h3>
-          <p style="font-size: 14px; line-height: 1.6; color: #64748b; margin: 0 0 24px 0;">Empirical usability audit identifying architectural friction and navigation loops on university portals.</p>
+          <span class="pill-metric" style="background-color: rgba(56, 189, 248, 0.1); color: #7dd3fc; border: 1px solid rgba(56, 189, 248, 0.2);">Heuristic Audit</span>
+          <h3 style="margin: 16px 0 10px 0; font-size: 19px; color: #ffffff; font-weight: 700;">eLearn UX Audit</h3>
+          <p style="font-size: 14px; line-height: 1.6; color: #94a3b8; margin: 0 0 24px 0;">Empirical usability evaluation identifying architectural friction and navigation loops on academic management portals.</p>
         </div>
-        <div style="border-top: 1px solid #f1f5f9; padding-top: 16px;">
-          <a href="#case-study-2-elearn-ux-audit" style="font-size: 13.5px; font-weight: 700; color: #0284c7; text-decoration: none;">View Details →</a>
-        </div>
-      </div>
-
-      <!-- EZShop Card -->
-      <div class="premium-card" style="flex: 1; min-width: 260px; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; border-top: 4px solid #6366f1 !important;">
-        <div>
-          <span class="pill-metric" style="background-color: #eef2ff; color: #4f46e5; border: 1px solid #c7d2fe;">Full-Stack Store</span>
-          <h3 style="margin: 16px 0 10px 0; font-size: 19px; color: #0f172a; font-weight: 700;">EZShop Platform</h3>
-          <p style="font-size: 14px; line-height: 1.6; color: #64748b; margin: 0 0 24px 0;">Relational e-commerce web platform engineered with session security, live inventory, and checkout logic.</p>
-        </div>
-        <div style="border-top: 1px solid #f1f5f9; padding-top: 16px;">
-          <a href="#case-study-ezshop" style="font-size: 13.5px; font-weight: 700; color: #4f46e5; text-decoration: none;">View Details →</a>
+        <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 16px;">
+          <a href="#case-study-2-elearn-ux-audit" style="font-size: 13.5px; font-weight: 700; color: #7dd3fc; text-decoration: none;">Deep Dive Details →</a>
         </div>
       </div>
 
     </div>
   </div>
 
-  <!-- Detailed Project 1: Laundrify -->
+  <!-- Detailed Project 1: Laundrify (Expanded Final Year Project) -->
   <div id="case-study-laundrify" style="padding-top: 10px; margin-bottom: 60px;">
-    <div class="premium-card" style="border-radius: 18px; padding: 36px;">
+    <div class="premium-card" style="border-radius: 20px; padding: 40px; border: 1px solid rgba(16, 185, 129, 0.2);">
       
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; margin-bottom: 24px; gap: 14px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 22px; margin-bottom: 28px; gap: 14px;">
         <div>
-          <h2 style="color: #0f172a; font-size: 24px; font-weight: 800; margin: 0;">Laundrify – On-Demand Service Platform</h2>
-          <p style="color: #059669; font-size: 12px; font-weight: 700; margin: 6px 0 0 0; text-transform: uppercase; letter-spacing: 1px;">Individual Final Year Project (FYP)</p>
+          <h2 style="color: #ffffff; font-size: 26px; font-weight: 800; margin: 0;">Laundrify – On-Demand Service Platform</h2>
+          <p style="color: #10b981; font-size: 12px; font-weight: 700; margin: 6px 0 0 0; text-transform: uppercase; letter-spacing: 1.5px;">Individual Final Year Capstone Project (Full Lifecycle)</p>
         </div>
-        <span style="font-size: 12px; font-weight: 600; background-color: #f8fafc; color: #475569; padding: 6px 16px; border-radius: 20px; border: 1px solid #e2e8f0;">Full-Stack & Cloud Architecture</span>
+        <span style="font-size: 12px; font-weight: 600; background-color: rgba(16, 185, 129, 0.08); color: #6ee7b7; padding: 6px 16px; border-radius: 20px; border: 1px solid rgba(16, 185, 129, 0.2);">Full-Stack Engineering & Cloud Architecture</span>
       </div>
       
-      <p style="font-size: 15px; line-height: 1.75; color: #334155; margin-bottom: 24px;">
-        Laundrify is an end-to-end on-demand service ecosystem designed to eliminate logistical bottlenecks in residential laundry workflows. Built from the ground up with modular <strong>RESTful APIs</strong>, relational data schemas, and role-based access control (RBAC), the platform ensures consistent state synchronizations across customer booking interfaces and administrative fulfillment dashboards.
-      </p>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 30px;">
-        <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px;">
-          <strong style="color: #059669; font-size: 13px; display: block; margin-bottom: 6px;">RESTful Core</strong>
-          <span style="font-size: 13px; color: #64748b; line-height: 1.5; display: block;">Modular JSON endpoints enforcing sanitized payload structures and automated status updates.</span>
-        </div>
-        <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px;">
-          <strong style="color: #059669; font-size: 13px; display: block; margin-bottom: 6px;">Database Integrity</strong>
-          <span style="font-size: 13px; color: #64748b; line-height: 1.5; display: block;">Indexed relational MySQL schemas with transactional integrity checks preventing race conditions.</span>
-        </div>
-        <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px;">
-          <strong style="color: #059669; font-size: 13px; display: block; margin-bottom: 6px;">Role Gating & Auth</strong>
-          <span style="font-size: 13px; color: #64748b; line-height: 1.5; display: block;">Role-based permission gating to segregate customer booking views from administrative fulfillment.</span>
-        </div>
+      <div style="background: rgba(16, 185, 129, 0.03); border: 1px solid rgba(16, 185, 129, 0.12); border-radius: 14px; padding: 24px; margin-bottom: 30px;">
+        <h4 style="margin-top: 0; color: #6ee7b7; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px;">Executive Architectural Problem & Core Solution</h4>
+        <p style="font-size: 14.5px; line-height: 1.8; color: #cbd5e1; margin-bottom: 14px;">
+          <strong>The Problem:</strong> Urban residential laundry operations operate primarily through fragmented, manual communication channels (messaging apps, unscheduled walk-ins). This model creates severe operational blindspots: lack of transparent weight-tier pricing, uncoordinated pickup logistics, high rates of order mismatch, and total absence of real-time status reporting for customers.
+        </p>
+        <p style="font-size: 14.5px; line-height: 1.8; color: #cbd5e1; margin-bottom: 0;">
+          <strong>The System Solution:</strong> Laundrify was architected as an automated, cloud-deployed platform resolving logistical friction across the entire order lifecycle. Engineered with clean separation of concerns, the platform pairs an intuitive customer self-service booking front-end with an administrative fulfillment portal, governed by strict transactional database routines, role-based security, and dynamic rate calculation engines.
+        </p>
       </div>
 
-      <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-        <div onclick="openUniversalImageModal('https://raw.githubusercontent.com/malcolmjeremiah/malcolmjeremiah.github.io/main/assets/laundrify-architecture.png', 'Laundrify System Architecture')" class="badge-btn" style="background: #059669; color: white; padding: 12px 22px; border-radius: 8px; font-weight: 600; font-size: 13px;">View Architecture Diagram</div>
-        <div onclick="openUniversalReportModal('22078778_Assignment1.pdf')" class="badge-btn" style="background: #ffffff; color: #0f172a; padding: 12px 22px; border-radius: 8px; font-weight: 600; font-size: 13px; border: 1px solid #cbd5e1;">Read Technical Report</div>
+      <!-- Comprehensive Technical Architecture Breakdown -->
+      <h4 style="color: #ffffff; font-size: 12px; font-weight: 700; margin-bottom: 18px; text-transform: uppercase; letter-spacing: 2px;">Comprehensive Engineering & System Pillars</h4>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 35px;">
+        
+        <div style="background-color: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 14px; padding: 22px;">
+          <strong style="color: #6ee7b7; font-size: 14px; display: block; margin-bottom: 8px;">1. REST API & Dynamic Pricing Calculation Engine</strong>
+          <p style="font-size: 13px; color: #94a3b8; line-height: 1.6; margin: 0;">
+            Designed decoupled REST endpoints handling order transitions and weight evaluations. Built a server-side pricing algorithm calculating dynamic fees based on measured dry-weight tiers, special textile handling requirements, express delivery turnaround options, and location service radii.
+          </p>
+        </div>
+
+        <div style="background-color: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 14px; padding: 22px;">
+          <strong style="color: #6ee7b7; font-size: 14px; display: block; margin-bottom: 8px;">2. Normalized Database Modeling & Transaction Locks</strong>
+          <p style="font-size: 13px; color: #94a3b8; line-height: 1.6; margin: 0;">
+            Structured a normalized MySQL relational schema enforcing referential integrity across Users, Orders, Service Categories, Weight Records, and Audit Logs. Integrated database transactions with row-level locks ensuring atomic order creations and preventing race conditions during peak scheduling.
+          </p>
+        </div>
+
+        <div style="background-color: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 14px; padding: 22px;">
+          <strong style="color: #6ee7b7; font-size: 14px; display: block; margin-bottom: 8px;">3. Role-Based Access Control (RBAC) & Security Hardening</strong>
+          <p style="font-size: 13px; color: #94a3b8; line-height: 1.6; margin: 0;">
+            Protected system endpoints with token-based authentication and granular permission middleware separating standard Customer access from Administrative dispatch views. Applied parameterized query structures to prevent SQL injection vulnerabilities and integrated input sanitization on all payload forms.
+          </p>
+        </div>
+
+        <div style="background-color: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 14px; padding: 22px;">
+          <strong style="color: #6ee7b7; font-size: 14px; display: block; margin-bottom: 8px;">4. Real-Time State Lifecycle & Automated Pipeline</strong>
+          <p style="font-size: 13px; color: #94a3b8; line-height: 1.6; margin: 0;">
+            Engineered a strict finite state lifecycle machine tracking orders through six discrete validation nodes: <em>Pending Pickup $\rightarrow$ Weighed & Invoiced $\rightarrow$ Washing $\rightarrow$ Quality Check $\rightarrow$ Out for Delivery $\rightarrow$ Completed</em>. Synchronized state updates instantly with user dashboard telemetry.
+          </p>
+        </div>
+
+        <div style="background-color: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 14px; padding: 22px;">
+          <strong style="color: #6ee7b7; font-size: 14px; display: block; margin-bottom: 8px;">5. Cloud Deployment & Production Resilience</strong>
+          <p style="font-size: 13px; color: #94a3b8; line-height: 1.6; margin: 0;">
+            Configured and deployed cloud container services using automated continuous deployment (CI/CD) pipelines. Structured persistent environment variables, connection pool configurations, and automated zero-downtime rolling deploys to maintain high availability under fluctuating traffic.
+          </p>
+        </div>
+
+        <div style="background-color: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 14px; padding: 22px;">
+          <strong style="color: #6ee7b7; font-size: 14px; display: block; margin-bottom: 8px;">6. UI/UX Workflow Optimization</strong>
+          <p style="font-size: 13px; color: #94a3b8; line-height: 1.6; margin: 0;">
+            Designed a responsive, mobile-first booking interface that minimizes cognitive load. Transitioned complex service configurations into a step-by-step progress stepper, reducing average order submission duration to under 90 seconds in pilot evaluations.
+          </p>
+        </div>
+
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+        <div onclick="openUniversalImageModal('https://raw.githubusercontent.com/malcolmjeremiah/malcolmjeremiah.github.io/main/assets/laundrify-architecture.png', 'Laundrify System Architecture Diagram')" class="badge-btn" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 13px 26px; border-radius: 10px; font-weight: 700; font-size: 13.5px;">View Architecture Diagram</div>
+        <div onclick="openUniversalReportModal('22078778_Assignment1.pdf')" class="badge-btn" style="background-color: rgba(255,255,255,0.05); color: #ffffff; padding: 13px 26px; border-radius: 10px; font-weight: 700; font-size: 13.5px; border: 1px solid rgba(255,255,255,0.1);">Read Technical Report</div>
       </div>
 
     </div>
   </div>
 
-  <!-- Detailed Project 2: ErgoChef+ -->
+  <!-- Detailed Project 2: EZShop (Expanded Full-Stack Store) -->
+  <div id="case-study-ezshop" style="padding-top: 10px; margin-bottom: 60px;">
+    <div class="premium-card" style="border-radius: 20px; padding: 40px; border: 1px solid rgba(129, 140, 248, 0.2);">
+      
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 22px; margin-bottom: 28px; gap: 14px;">
+        <div>
+          <h2 style="color: #ffffff; font-size: 26px; font-weight: 800; margin: 0;">EZShop – E-Commerce Web Application</h2>
+          <p style="color: #818cf8; font-size: 12px; font-weight: 700; margin: 6px 0 0 0; text-transform: uppercase; letter-spacing: 1.5px;">Relational E-Commerce Platform Architecture</p>
+        </div>
+        <span style="font-size: 12px; font-weight: 600; background-color: rgba(129, 140, 248, 0.08); color: #a5b4fc; padding: 6px 16px; border-radius: 20px; border: 1px solid rgba(129, 140, 248, 0.2);">Full-Stack PHP & Relational Database Engineering</span>
+      </div>
+
+      <div style="background: rgba(129, 140, 248, 0.03); border: 1px solid rgba(129, 140, 248, 0.12); border-radius: 14px; padding: 24px; margin-bottom: 28px;">
+        <h4 style="margin-top: 0; color: #a5b4fc; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px;">Platform Scope & Architecture</h4>
+        <p style="font-size: 14.5px; line-height: 1.8; color: #cbd5e1; margin: 0;">
+          EZShop is a complete transactional online shopping portal engineered using <strong>native PHP, MySQL, HTML5, and CSS3</strong>. Developed without heavy monolithic abstractions to gain complete control over relational transaction structures, the system showcases custom session lifecycle handlers, real-time inventory locking, indexed multi-attribute product queries, and an integrated customer loyalty point ledger.
+        </p>
+      </div>
+
+      <!-- In-Depth Specs Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 30px;">
+        <div style="background-color: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 20px;">
+          <strong style="color: #a5b4fc; font-size: 13.5px; display: block; margin-bottom: 6px;">Indexed Catalog Query Optimization</strong>
+          <span style="font-size: 13px; color: #94a3b8; line-height: 1.6; display: block;">Structured B-tree composite indices across category foreign keys and pricing columns, enabling instant multi-filter search queries across expanding product catalogues.</span>
+        </div>
+        <div style="background-color: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 20px;">
+          <strong style="color: #a5b4fc; font-size: 13.5px; display: block; margin-bottom: 6px;">Secure Session State & Cart Persistence</strong>
+          <span style="font-size: 13px; color: #94a3b8; line-height: 1.6; display: block;">Engineered server-side session regeneration to prevent session fixation attacks, maintaining persistent encrypted cart contents across multi-page browsing and user checkout.</span>
+        </div>
+        <div style="background-color: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 20px;">
+          <strong style="color: #a5b4fc; font-size: 13.5px; display: block; margin-bottom: 6px;">Transactional Stock Deduction & Ledger</strong>
+          <span style="font-size: 13px; color: #94a3b8; line-height: 1.6; display: block;">Wrapped order checkout processes within ACID-compliant SQL transactions, ensuring live inventory balances decrement accurately while simultaneously logging reward points.</span>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 14px;">
+        <div onclick="openUniversalImageModal('https://raw.githubusercontent.com/malcolmjeremiah/malcolmjeremiah.github.io/main/assets/ezshop-erd.png', 'EZShop Entity Relationship Diagram (ERD)')" class="badge-btn" style="background-color: rgba(255,255,255,0.05); color: #ffffff; padding: 13px 26px; border-radius: 10px; font-weight: 700; font-size: 13.5px; border: 1px solid rgba(255,255,255,0.1);">View Database ERD Schema</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Detailed Project 3: ErgoChef+ -->
   <div id="case-study-1-ergochef" style="padding-top: 10px; margin-bottom: 60px;">
-    <div class="premium-card" style="border-radius: 18px; padding: 36px;">
+    <div class="premium-card" style="border-radius: 20px; padding: 40px; border: 1px solid rgba(249, 115, 22, 0.2);">
       
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; margin-bottom: 24px; gap: 14px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 22px; margin-bottom: 28px; gap: 14px;">
         <div>
-          <h2 style="color: #0f172a; font-size: 24px; font-weight: 800; margin: 0;">ErgoChef+ – AI Ergonomic Assistant</h2>
-          <p style="color: #ea580c; font-size: 12px; font-weight: 700; margin: 6px 0 0 0; text-transform: uppercase; letter-spacing: 1px;">AI-Powered Kitchen Context Ecosystem</p>
+          <h2 style="color: #ffffff; font-size: 26px; font-weight: 800; margin: 0;">ErgoChef+ – AI Ergonomic Assistant</h2>
+          <p style="color: #f97316; font-size: 12px; font-weight: 700; margin: 6px 0 0 0; text-transform: uppercase; letter-spacing: 1.5px;">Context Cooking Ergonomic Ecosystem</p>
         </div>
-        <span style="font-size: 12px; font-weight: 600; background-color: #f8fafc; color: #475569; padding: 6px 16px; border-radius: 20px; border: 1px solid #e2e8f0;">Lead UI & Interaction Designer</span>
+        <span style="font-size: 12px; font-weight: 600; background-color: rgba(249, 115, 22, 0.08); color: #fdba74; padding: 6px 16px; border-radius: 20px; border: 1px solid rgba(249, 115, 22, 0.2);">Lead UI & Interaction Designer</span>
       </div>
       
-      <p style="font-size: 15px; line-height: 1.75; color: #334155; margin-bottom: 24px;">
-        An AI-assisted ergonomic interface designed to mitigate chronic physical fatigue and musculoskeletal strain during extended culinary prep. ErgoChef+ integrates posture detection frameworks, non-intrusive alert HUDs, and telemetry reporting to build sustainable kitchen ergonomics.
+      <p style="font-size: 15px; line-height: 1.8; color: #cbd5e1; margin-bottom: 24px;">
+        An AI-assisted ergonomic interface designed to reduce musculoskeletal fatigue during extended meal preparation. The system pairs real-time posture detection tracking with non-intrusive peripheral HUD notifications and session analytics, teaching long-term ergonomic cooking habits without breaking the user's culinary focus.
       </p>
 
-      <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-        <a href="https://ergo-chef-journey.lovable.app/" target="_blank" class="badge-btn" style="background: #ea580c; color: white; padding: 12px 22px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 13px;">Launch Live Prototype</a>
-        <div onclick="openVideoModal('ergochef')" class="badge-btn" style="background: #ffffff; color: #0f172a; padding: 12px 22px; border-radius: 8px; font-weight: 600; font-size: 13px; border: 1px solid #cbd5e1;">Watch Video Demo</div>
-        <div onclick="openUniversalImageModal('https://github.com/malcolmjeremiah/malcolmjeremiah.github.io/blob/main/ErgoChef+%20(3).png?raw=true', 'ErgoChef+ Project Poster')" class="badge-btn" style="background: #ffffff; color: #0f172a; padding: 12px 22px; border-radius: 8px; font-weight: 600; font-size: 13px; border: 1px solid #cbd5e1;">View Project Poster</div>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+        <a href="https://ergo-chef-journey.lovable.app/" target="_blank" class="badge-btn" style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); color: white; padding: 13px 26px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 13.5px;">Launch Live Prototype</a>
+        <div onclick="openVideoModal('ergochef')" class="badge-btn" style="background-color: rgba(255,255,255,0.05); color: #ffffff; padding: 13px 26px; border-radius: 10px; font-weight: 700; font-size: 13.5px; border: 1px solid rgba(255,255,255,0.1);">Watch Video Demo</div>
+        <div onclick="openUniversalImageModal('https://github.com/malcolmjeremiah/malcolmjeremiah.github.io/blob/main/ErgoChef+%20(3).png?raw=true', 'ErgoChef+ Project Poster')" class="badge-btn" style="background-color: rgba(255,255,255,0.05); color: #ffffff; padding: 13px 26px; border-radius: 10px; font-weight: 700; font-size: 13.5px; border: 1px solid rgba(255,255,255,0.1);">View Project Poster</div>
       </div>
 
     </div>
   </div>
 
-  <!-- Detailed Project 3: eLearn Heuristic Audit -->
+  <!-- Detailed Project 4: eLearn Usability Audit -->
   <div id="case-study-2-elearn-ux-audit" style="padding-top: 10px; margin-bottom: 60px;">
-    <div class="premium-card" style="border-radius: 18px; padding: 36px;">
+    <div class="premium-card" style="border-radius: 20px; padding: 40px; border: 1px solid rgba(56, 189, 248, 0.2);">
       
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; margin-bottom: 24px; gap: 14px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 22px; margin-bottom: 28px; gap: 14px;">
         <div>
-          <h2 style="color: #0f172a; font-size: 24px; font-weight: 800; margin: 0;">Institutional eLearn UX Audit</h2>
-          <p style="color: #0284c7; font-size: 12px; font-weight: 700; margin: 6px 0 0 0; text-transform: uppercase; letter-spacing: 1px;">Academic Management Portal Usability Evaluation</p>
+          <h2 style="color: #ffffff; font-size: 26px; font-weight: 800; margin: 0;">Institutional eLearn UX Audit</h2>
+          <p style="color: #38bdf8; font-size: 12px; font-weight: 700; margin: 6px 0 0 0; text-transform: uppercase; letter-spacing: 1.5px;">Academic Management Portal Usability Evaluation</p>
         </div>
-        <span style="font-size: 12px; font-weight: 600; background-color: #f8fafc; color: #475569; padding: 6px 16px; border-radius: 20px; border: 1px solid #e2e8f0;">Lead Usability Auditor</span>
+        <span style="font-size: 12px; font-weight: 600; background-color: rgba(56, 189, 248, 0.08); color: #7dd3fc; padding: 6px 16px; border-radius: 20px; border: 1px solid rgba(56, 189, 248, 0.2);">Lead Usability Auditor</span>
       </div>
       
-      <p style="font-size: 15px; line-height: 1.75; color: #334155; margin-bottom: 20px;">
-        Conducted an empirical usability evaluation on the institutional academic portal utilizing Nielsen Norman heuristics and cognitive walkthroughs to isolate structural navigation bottlenecks and multi-click journey loops.
+      <p style="font-size: 15px; line-height: 1.8; color: #cbd5e1; margin-bottom: 20px;">
+        Conducted an empirical usability evaluation on the university learning management portal utilizing Nielsen Norman heuristics and structured cognitive walkthroughs to identify navigation bottlenecks, visual inconsistencies, and high-friction multi-click loops.
       </p>
 
       <!-- Clean High-Contrast Diagnostic Table -->
@@ -535,73 +681,35 @@
             <tr>
               <th>Violation ID</th>
               <th>Heuristic Target</th>
-              <th>Failure Description</th>
+              <th>Defect Description</th>
               <th>Severity</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td style="color: #0284c7; font-weight: 700;">V01</td>
-              <td>H2: System & Real World</td>
-              <td>Raw internal database keys and obscure system parameters exposed on main portal headings.</td>
-              <td><span style="background: #fef3c7; color: #b45309; padding: 3px 8px; border-radius: 4px; font-weight: 700; font-size: 11px;">Severity 2</span></td>
+              <td style="color: #38bdf8; font-weight: 700;">V01</td>
+              <td>H2: Match System & Real World</td>
+              <td>Raw internal database entity keys and unparsed system strings exposed on primary student navigation headers.</td>
+              <td><span style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; padding: 3px 8px; border-radius: 4px; font-weight: 700; font-size: 11px;">Severity 2</span></td>
             </tr>
             <tr>
-              <td style="color: #0284c7; font-weight: 700;">V03</td>
-              <td>H4: Consistency Standards</td>
-              <td>Course catalog filtering consistently drops active enrollment modules on upper-tier student accounts.</td>
-              <td><span style="background: #fee2e2; color: #b91c1c; padding: 3px 8px; border-radius: 4px; font-weight: 700; font-size: 11px;">Severity 3</span></td>
+              <td style="color: #38bdf8; font-weight: 700;">V03</td>
+              <td>H4: Consistency & Standards</td>
+              <td>Course catalog filtering consistently returns empty container cells on active upper-tier student profiles.</td>
+              <td><span style="background: rgba(239, 68, 68, 0.15); color: #ef4444; padding: 3px 8px; border-radius: 4px; font-weight: 700; font-size: 11px;">Severity 3</span></td>
             </tr>
             <tr>
-              <td style="color: #0284c7; font-weight: 700;">V04</td>
-              <td>H7: Flexibility & Efficiency</td>
-              <td>Primary dashboards cluttered with archived, static modules lacking automated seasonal archival triggers.</td>
-              <td><span style="background: #fee2e2; color: #b91c1c; padding: 3px 8px; border-radius: 4px; font-weight: 700; font-size: 11px;">Severity 3</span></td>
+              <td style="color: #38bdf8; font-weight: 700;">V04</td>
+              <td>H7: Flexibility & Efficiency of Use</td>
+              <td>Workspaces cluttered with expired courses due to complete lack of automated archival triggers or batch dismissal.</td>
+              <td><span style="background: rgba(239, 68, 68, 0.15); color: #ef4444; padding: 3px 8px; border-radius: 4px; font-weight: 700; font-size: 11px;">Severity 3</span></td>
             </tr>
           </tbody>
         </table>
       </div>
 
       <div style="margin-top: 24px;">
-        <div onclick="openUniversalReportModal('22078778_Assignment1.pdf')" class="badge-btn" style="background: #0284c7; color: white; padding: 12px 22px; border-radius: 8px; font-weight: 600; font-size: 13px;">View Complete Audit Report PDF</div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Detailed Project 4: EZShop (Expanded Architecture & DB Specs) -->
-  <div id="case-study-ezshop" style="padding-top: 10px; margin-bottom: 60px;">
-    <div class="premium-card" style="border-radius: 18px; padding: 36px;">
-      
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; margin-bottom: 24px; gap: 14px;">
-        <div>
-          <h2 style="color: #0f172a; font-size: 24px; font-weight: 800; margin: 0;">EZShop – E-Commerce Web Application</h2>
-          <p style="color: #4f46e5; font-size: 12px; font-weight: 700; margin: 6px 0 0 0; text-transform: uppercase; letter-spacing: 1px;">Relational E-Commerce Platform Architecture</p>
-        </div>
-        <span style="font-size: 12px; font-weight: 600; background-color: #f8fafc; color: #475569; padding: 6px 16px; border-radius: 20px; border: 1px solid #e2e8f0;">Full-Stack PHP / MySQL</span>
-      </div>
-
-      <p style="font-size: 15px; line-height: 1.75; color: #334155; margin-bottom: 20px;">
-        EZShop is a transactional online retail web platform built natively using <strong>PHP, MySQL, HTML5, and CSS3</strong>. The system architecture emphasizes data normalization, authenticated transaction flows, and responsive UI components.
-      </p>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 28px;">
-        <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px;">
-          <strong style="color: #4f46e5; font-size: 13px; display: block; margin-bottom: 6px;">Catalog Indexing & Search</strong>
-          <span style="font-size: 13px; color: #64748b; line-height: 1.5; display: block;">Structured SQL index modeling enabling rapid real-time product filtering, category isolation, and price range sorting.</span>
-        </div>
-        <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px;">
-          <strong style="color: #4f46e5; font-size: 13px; display: block; margin-bottom: 6px;">Session & Cart State</strong>
-          <span style="font-size: 13px; color: #64748b; line-height: 1.5; display: block;">Encrypted PHP session handling maintaining cart state persistence across page navigation and authenticated checkout transitions.</span>
-        </div>
-        <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px;">
-          <strong style="color: #4f46e5; font-size: 13px; display: block; margin-bottom: 6px;">Inventory & Points Engine</strong>
-          <span style="font-size: 13px; color: #64748b; line-height: 1.5; display: block;">Automated stock deduction routines and reward loyalty balance accounting triggered concurrently upon order confirmation.</span>
-        </div>
-      </div>
-
-      <div style="display: flex; gap: 12px;">
-        <div onclick="openUniversalImageModal('https://raw.githubusercontent.com/malcolmjeremiah/malcolmjeremiah.github.io/main/assets/ezshop-erd.png', 'EZShop Database Schema')" class="badge-btn" style="background: #ffffff; color: #0f172a; padding: 12px 22px; border-radius: 8px; font-weight: 600; font-size: 13px; border: 1px solid #cbd5e1;">View Database ERD Schema</div>
+        <div onclick="openUniversalReportModal('22078778_Assignment1.pdf')" class="badge-btn" style="background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%); color: #020617; padding: 13px 26px; border-radius: 10px; font-weight: 700; font-size: 13.5px;">View Complete Audit Report PDF</div>
       </div>
 
     </div>
@@ -633,13 +741,12 @@
 
 </div>
 
-<!-- JavaScript Core: Sequence & Lightbox Controls -->
+<!-- JavaScript Core -->
 <script>
-  /* Header Sequential Typewriter */
   const w1 = "MALCOLM";
   const w2 = "JEREMIAH";
   const w3 = "RICHARD";
-  const taglineStr = "BSC (HONS) INFORMATION TECHNOLOGY | ENTERPRISE & SOFTWARE PORTFOLIO";
+  const taglineStr = "BSC (HONS) INFORMATION TECHNOLOGY | SOFTWARE & ENTERPRISE PORTFOLIO";
   
   const c1 = document.getElementById("js-type-name-1");
   const c2 = document.getElementById("js-type-name-2");
@@ -684,7 +791,7 @@
     setTimeout(typeSequence, 300);
   });
 
-  /* Lightbox Mechanics */
+  /* Lightbox Handlers */
   const universalImageModal = document.getElementById('universalImageModal');
   const universalModalImg = document.getElementById('universalModalImg');
   const videoModal = document.getElementById('videoModal');
@@ -695,7 +802,7 @@
   function openUniversalImageModal(imgSrc, altText) {
     resetZoom();
     universalModalImg.src = imgSrc;
-    universalModalImg.alt = altText || 'Artefact';
+    universalModalImg.alt = altText || 'Technical Artefact';
     universalImageModal.classList.add('is-active');
     document.body.style.overflow = 'hidden'; 
   }
@@ -760,7 +867,7 @@
     }
   });
 
-  /* Pan & Zoom Mechanics */
+  /* Pan & Zoom */
   let isZoomed = false;
   let isDragging = false;
   let startX, startY;
