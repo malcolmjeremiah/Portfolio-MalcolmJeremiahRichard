@@ -1,8 +1,8 @@
 ---
 ---
-<!-- Enterprise Celestial Layout Framework -->
+<!-- Enterprise Celestial Dark Architecture Framework -->
 <style>
-  /* Suppress default GitHub theme banners and title injections */
+  /* Suppress default GitHub Pages theme banners and title injections */
   header.page-header, .page-header, .site-header, #project_title, .project-name {
     display: none !important;
   }
@@ -37,7 +37,7 @@
     box-sizing: border-box !important;
   }
 
-  /* Celestial Dynamic Background */
+  /* Celestial Canvas Layers */
   .space-canvas {
     position: fixed !important;
     top: 0 !important;
@@ -102,7 +102,7 @@
     100% { transform: translateX(-550px) translateY(500px) rotate(-45deg); opacity: 0; }
   }
 
-  /* Header Card */
+  /* Minimal Clean Hero Card */
   .custom-portfolio-header {
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.45) 0%, rgba(30, 41, 59, 0.2) 100%) !important;
     backdrop-filter: blur(24px) !important;
@@ -156,7 +156,7 @@
     50% { opacity: 1; }
   }
 
-  /* Navigation Dock */
+  /* Minimal Navigation Dock */
   .nav-container {
     position: -webkit-sticky;
     position: sticky;
@@ -192,7 +192,7 @@
     background-color: rgba(255, 255, 255, 0.05) !important;
   }
 
-  /* Frosted Modern Cards */
+  /* Frosted Matrix Cards */
   .premium-card {
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.5) 0%, rgba(30, 41, 59, 0.25) 100%) !important;
     backdrop-filter: blur(20px) !important;
@@ -266,7 +266,7 @@
     line-height: 1.6 !important;
   }
 
-  /* Modals */
+  /* Dynamic Modal Architecture */
   .custom-modal-overlay {
     position: fixed !important;
     top: 0 !important;
@@ -381,7 +381,7 @@
   }
 </style>
 
-<!-- Canvas Layers -->
+<!-- Canvas Backdrop -->
 <div class="space-canvas">
   <div class="diagonal-shooting-star star-d1"></div>
   <div class="diagonal-shooting-star star-d2"></div>
@@ -394,7 +394,7 @@
 
 <div class="main-content">
 
-  <!-- Clean Top Profile Display -->
+  <!-- Top Hero Header -->
   <div class="custom-portfolio-header">
     <h1 class="typewriter-title">
       <span class="name-word-group" id="js-type-name-1"></span> 
@@ -404,7 +404,7 @@
     <h2 id="js-type-tagline" class="typewriter-tagline"></h2>
   </div>
 
-  <!-- Focused Navigation Dock -->
+  <!-- Unified Navigation Dock -->
   <div class="nav-container">
     <a href="#who-i-am" class="nav-btn">Profile</a>
     <a href="#projects-overview" class="nav-btn">Directory</a>
@@ -513,7 +513,7 @@
     </div>
   </div>
 
-  <!-- Detailed Project 1: Laundrify (Expanded Final Year Project) -->
+  <!-- Detailed Project 1: Laundrify (FYP In-Depth) -->
   <div id="case-study-laundrify" style="padding-top: 10px; margin-bottom: 60px;">
     <div class="premium-card" style="border-radius: 20px; padding: 40px; border: 1px solid rgba(16, 185, 129, 0.2);">
       
@@ -583,15 +583,16 @@
 
       </div>
 
+      <!-- Laundrify Action Triggers -->
       <div style="display: flex; flex-wrap: wrap; gap: 14px;">
-        <div onclick="openUniversalImageModal('https://raw.githubusercontent.com/malcolmjeremiah/malcolmjeremiah.github.io/main/assets/laundrify-architecture.png', 'Laundrify System Architecture Diagram')" class="badge-btn" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 13px 26px; border-radius: 10px; font-weight: 700; font-size: 13.5px;">View Architecture Diagram</div>
-        <div onclick="openUniversalReportModal('22078778_Assignment1.pdf')" class="badge-btn" style="background-color: rgba(255,255,255,0.05); color: #ffffff; padding: 13px 26px; border-radius: 10px; font-weight: 700; font-size: 13.5px; border: 1px solid rgba(255,255,255,0.1);">Read Technical Report</div>
+        <a href="https://laundrify-seven.vercel.app/" target="_blank" class="badge-btn" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 13px 26px; border-radius: 10px; font-weight: 700; font-size: 13.5px; text-decoration: none;">Launch Live Platform ↗</a>
+        <div onclick="openUniversalReportModal('FR_22078778.pdf')" class="badge-btn" style="background-color: rgba(255,255,255,0.05); color: #ffffff; padding: 13px 26px; border-radius: 10px; font-weight: 700; font-size: 13.5px; border: 1px solid rgba(255,255,255,0.1);">Read Technical Report</div>
       </div>
 
     </div>
   </div>
 
-  <!-- Detailed Project 2: EZShop (Expanded Full-Stack Store) -->
+  <!-- Detailed Project 2: EZShop (Expanded Store Architecture) -->
   <div id="case-study-ezshop" style="padding-top: 10px; margin-bottom: 60px;">
     <div class="premium-card" style="border-radius: 20px; padding: 40px; border: 1px solid rgba(129, 140, 248, 0.2);">
       
@@ -610,8 +611,7 @@
         </p>
       </div>
 
-      <!-- In-Depth Specs Grid -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 30px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px;">
         <div style="background-color: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 20px;">
           <strong style="color: #a5b4fc; font-size: 13.5px; display: block; margin-bottom: 6px;">Indexed Catalog Query Optimization</strong>
           <span style="font-size: 13px; color: #94a3b8; line-height: 1.6; display: block;">Structured B-tree composite indices across category foreign keys and pricing columns, enabling instant multi-filter search queries across expanding product catalogues.</span>
@@ -624,10 +624,6 @@
           <strong style="color: #a5b4fc; font-size: 13.5px; display: block; margin-bottom: 6px;">Transactional Stock Deduction & Ledger</strong>
           <span style="font-size: 13px; color: #94a3b8; line-height: 1.6; display: block;">Wrapped order checkout processes within ACID-compliant SQL transactions, ensuring live inventory balances decrement accurately while simultaneously logging reward points.</span>
         </div>
-      </div>
-
-      <div style="display: flex; gap: 14px;">
-        <div onclick="openUniversalImageModal('https://raw.githubusercontent.com/malcolmjeremiah/malcolmjeremiah.github.io/main/assets/ezshop-erd.png', 'EZShop Entity Relationship Diagram (ERD)')" class="badge-btn" style="background-color: rgba(255,255,255,0.05); color: #ffffff; padding: 13px 26px; border-radius: 10px; font-weight: 700; font-size: 13.5px; border: 1px solid rgba(255,255,255,0.1);">View Database ERD Schema</div>
       </div>
 
     </div>
@@ -674,7 +670,7 @@
         Conducted an empirical usability evaluation on the university learning management portal utilizing Nielsen Norman heuristics and structured cognitive walkthroughs to identify navigation bottlenecks, visual inconsistencies, and high-friction multi-click loops.
       </p>
 
-      <!-- Clean High-Contrast Diagnostic Table -->
+      <!-- High-Contrast Diagnostic Table -->
       <div class="audit-table-wrapper">
         <table class="audit-table">
           <thead>
