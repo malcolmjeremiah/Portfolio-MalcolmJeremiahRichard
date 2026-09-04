@@ -1,129 +1,47 @@
-<!-- Enterprise UI Layout Engine & Premium Dark Space Override Framework -->
+<!-- Enterprise Modern Light Theme Layout Engine -->
 <style>
-  /* Force hide GitHub Pages theme default header components */
+  /* Force hide GitHub Pages theme defaults */
   header.page-header, .page-header, .site-header {
     display: none !important;
   }
 
-  /* Global Page Canvas & Premium Typography System */
   html {
     scroll-behavior: smooth !important;
-    background-color: #020617 !important;
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "-apple-system-body", "Segoe UI", Roboto, sans-serif !important;
-    color: #f8fafc !important;
+    background-color: #f8fafc !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+    color: #0f172a !important;
     letter-spacing: -0.1px;
     overflow-x: hidden;
   }
   
   body {
     max-width: 1140px !important;
-    padding: 40px 20px !important;
+    padding: 30px 20px !important;
     margin: 0 auto !important;
-    background-color: #020617 !important;
-    background-image: 
-      radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.08) 0px, transparent 55%),
-      radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.06) 0px, transparent 55%),
-      radial-gradient(at 50% 100%, rgba(15, 23, 42, 0.98) 0px, transparent 75%) !important;
-    background-attachment: fixed !important;
+    background-color: #f8fafc !important;
     position: relative;
   }
   
   .main-content {
     max-width: 100% !important;
     padding: 0 !important;
-    position: relative;
-    z-index: 2;
     box-sizing: border-box !important;
   }
 
-  /* Dense Cosmic Night Sky Canvas Backdrop Layer */
-  .space-canvas {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100vw !important;
-    height: 100vh !important;
-    pointer-events: none !important;
-    z-index: -1 !important;
-    overflow: hidden !important;
-    background-image: 
-      radial-gradient(1.2px 1.2px at 15px 25px, #ffffff, rgba(0,0,0,0)),
-      radial-gradient(1px 1px at 45px 90px, #ffffff, rgba(0,0,0,0)),
-      radial-gradient(1.5px 1.5px at 110px 65px, #ffffff, rgba(0,0,0,0)),
-      radial-gradient(1px 1px at 210px 140px, #7dd3fc, rgba(0,0,0,0)),
-      radial-gradient(1.2px 1.2px at 190px 240px, #ffffff, rgba(0,0,0,0)),
-      radial-gradient(1px 1px at 310px 380px, #ffffff, rgba(0,0,0,0)),
-      radial-gradient(1.5px 1.5px at 420px 95px, #a5b4fc, rgba(0,0,0,0)),
-      radial-gradient(1px 1px at 580px 210px, #ffffff, rgba(0,0,0,0)),
-      radial-gradient(1.2px 1.2px at 690px 130px, #ffffff, rgba(0,0,0,0)),
-      radial-gradient(1px 1px at 810px 80px, #7dd3fc, rgba(0,0,0,0)),
-      radial-gradient(1.8px 1.8px at 890px 320px, #ffffff, rgba(0,0,0,0)),
-      radial-gradient(1.2px 1.2px at 1050px 190px, #ffffff, rgba(0,0,0,0)),
-      radial-gradient(1px 1px at 35px 280px, #ffffff, rgba(0,0,0,0)),
-      radial-gradient(1.5px 1.5px at 145px 420px, #ffffff, rgba(0,0,0,0)),
-      radial-gradient(1px 1px at 280px 510px, #a5b4fc, rgba(0,0,0,0)),
-      radial-gradient(1.2px 1.2px at 490px 320px, #ffffff, rgba(0,0,0,0)),
-      radial-gradient(1px 1px at 670px 460px, #ffffff, rgba(0,0,0,0)),
-      radial-gradient(1.5px 1.5px at 830px 240px, #7dd3fc, rgba(0,0,0,0)),
-      radial-gradient(1px 1px at 960px 490px, #ffffff, rgba(0,0,0,0)),
-      radial-gradient(1.2px 1.2px at 1110px 410px, #ffffff, rgba(0,0,0,0)) !important;
-    background-repeat: repeat !important;
-    background-size: 400px 400px !important;
-    opacity: 0.85;
-    animation: celestialShimmer 4s ease-in-out infinite alternate !important;
-  }
-
-  @keyframes celestialShimmer {
-    0% { opacity: 0.65; }
-    100% { opacity: 0.90; }
-  }
-  
-  /* Diagonal High-Velocity Shooting Star Matrix */
-  .diagonal-shooting-star {
-    position: absolute !important;
-    height: 1.5px;
-    background: linear-gradient(-45deg, #ffffff, rgba(56, 189, 248, 0));
-    filter: drop-shadow(0 0 8px #60a5fa);
-    opacity: 0;
-  }
-
-  .star-d1 { top: -60px; left: 3%;   width: 130px; animation: diagonalStreak 1.8s linear infinite !important; animation-delay: 0.1s !important; }
-  .star-d2 { top: -60px; left: 20%;  width: 160px; animation: diagonalStreak 2.5s linear infinite !important; animation-delay: 1.2s !important; }
-  .star-d3 { top: -60px; left: 38%;  width: 115px; animation: diagonalStreak 2.1s linear infinite !important; animation-delay: 0.5s !important; }
-  .star-d4 { top: -60px; left: 55%;  width: 150px; animation: diagonalStreak 2.9s linear infinite !important; animation-delay: 1.8s !important; }
-  .star-d5 { top: -60px; left: 72%;  width: 135px; animation: diagonalStreak 2.3s linear infinite !important; animation-delay: 0.2s !important; }
-  .star-d6 { top: -60px; left: 88%;  width: 145px; animation: diagonalStreak 2.6s linear infinite !important; animation-delay: 0.9s !important; }
-  .star-d7 { top: -60px; left: 96%;  width: 120px; animation: diagonalStreak 2.2s linear infinite !important; animation-delay: 1.4s !important; }
-  .star-d8  { top: 25vh;  left: 1%;   width: 110px; animation: diagonalStreak 2.4s linear infinite !important; animation-delay: 0.7s !important; }
-  .star-d9  { top: 40vh;  left: 84%;  width: 135px; animation: diagonalStreak 2.2s linear infinite !important; animation-delay: 1.3s !important; }
-  .star-d10 { top: 60vh;  left: 15%;  width: 125px; animation: diagonalStreak 2.7s linear infinite !important; animation-delay: 0.4s !important; }
-  .star-d11 { top: 75vh;  left: 90%;  width: 140px; animation: diagonalStreak 2.5s linear infinite !important; animation-delay: 1.1s !important; }
-
-  @keyframes diagonalStreak {
-    0% { transform: translateX(0) translateY(0) rotate(-45deg); opacity: 0; }
-    3% { opacity: 1; }
-    22% { transform: translateX(-550px) translateY(500px) rotate(-45deg); opacity: 0; }
-    100% { transform: translateX(-550px) translateY(500px) rotate(-45deg); opacity: 0; }
-  }
-
-  /* Header Hero Card */
+  /* Clean Minimalist Hero Card */
   .custom-portfolio-header {
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.4) 0%, rgba(30, 41, 59, 0.15) 100%) !important;
-    backdrop-filter: blur(24px) !important;
-    -webkit-backdrop-filter: blur(24px) !important;
-    padding: 7rem 2rem 5rem 2rem !important;
+    background: #ffffff !important;
+    padding: 4.5rem 2rem 4rem 2rem !important;
     text-align: center !important;
-    border-radius: 28px !important;
-    box-shadow: 0 40px 100px -30px rgba(0, 0, 0, 0.95) !important;
-    border: 1px solid rgba(255, 255, 255, 0.04) !important;
-    margin-top: 20px !important;
-    margin-bottom: 45px !important;
+    border-radius: 20px !important;
+    box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08) !important;
+    border: 1px solid #e2e8f0 !important;
+    margin-top: 10px !important;
+    margin-bottom: 35px !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    position: relative;
-    z-index: 2;
   }
   
   .name-word-group {
@@ -132,10 +50,10 @@
   }
 
   .typewriter-title {
-    color: #ffffff !important;
+    color: #0f172a !important;
     font-size: 38px !important;
     font-weight: 800 !important;
-    letter-spacing: -0.5px !important;
+    letter-spacing: -0.8px !important;
     margin: 0 !important;
     text-align: center !important;
     line-height: 1.25;
@@ -143,48 +61,21 @@
   }
 
   .typewriter-tagline {
-    color: #94a3b8 !important;
-    font-size: 11.5px !important;
+    color: #64748b !important;
+    font-size: 12px !important;
     font-weight: 700 !important;
     text-transform: uppercase !important;
-    letter-spacing: 3.5px !important;
-    margin: 18px 0 0 0 !important;
+    letter-spacing: 2px !important;
+    margin: 14px 0 0 0 !important;
     text-align: center !important;
     line-height: 1.5;
     width: 100% !important;
     display: block !important;
-    min-height: 18px;
-  }
-
-  .subtle-walkthrough-btn {
-    margin-top: 24px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 8px !important;
-    background: rgba(255, 255, 255, 0.04) !important;
-    color: #38bdf8 !important;
-    padding: 8px 18px !important;
-    border-radius: 20px !important;
-    font-weight: 600 !important;
-    font-size: 12px !important;
-    letter-spacing: 0.3px !important;
-    cursor: pointer !important;
-    border: 1px solid rgba(56, 189, 248, 0.2) !important;
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(10px) !important;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  }
-
-  .subtle-walkthrough-btn:hover {
-    background: rgba(56, 189, 248, 0.1) !important;
-    color: #ffffff !important;
-    border-color: rgba(56, 189, 248, 0.4) !important;
-    transform: translateY(-2px) !important;
   }
 
   .blinking-cursor {
     display: inline-block !important;
-    color: #ffffff !important; 
+    color: #2563eb !important; 
     font-weight: 800 !important;
     font-size: 36px !important;
     animation: pulseCursor 0.8s step-end infinite !important;
@@ -198,144 +89,117 @@
     50% { opacity: 1; }
   }
 
-  /* Navigation Dock */
+  /* Minimalist Clean Navigation Dock */
   .nav-container {
     position: -webkit-sticky;
     position: sticky;
-    top: 24px;
+    top: 20px;
     z-index: 999;
     display: flex;
     justify-content: center;
-    background-color: rgba(3, 7, 18, 0.75);
-    -webkit-backdrop-filter: blur(30px);
-    backdrop-filter: blur(30px);
+    background-color: rgba(255, 255, 255, 0.92);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
     padding: 6px;
     border-radius: 40px;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255,255,255,0.05);
-    margin-bottom: 80px;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06);
+    margin-bottom: 60px;
   }
 
   .nav-btn {
     position: relative !important;
     white-space: nowrap !important;
-    color: #94a3b8 !important;
-    padding: 12px 24px !important;
+    color: #475569 !important;
+    padding: 10px 20px !important;
     border-radius: 30px !important;
     text-decoration: none !important;
     font-weight: 600 !important;
     font-size: 13px !important;
     display: inline-block !important;
-    letter-spacing: 0.2px !important;
-    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
+    transition: all 0.25s ease !important;
   }
   
   .nav-btn:hover {
-    color: #ffffff !important;
-    background-color: rgba(255, 255, 255, 0.05) !important;
+    color: #0f172a !important;
+    background-color: #f1f5f9 !important;
   }
-  
-  .nav-btn::after {
-    content: '' !important;
-    position: absolute !important;
-    bottom: 4px !important;
-    left: 50% !important;
-    width: 0 !important;
-    height: 2px !important;
-    background: linear-gradient(90deg, #38bdf8, #818cf8) !important;
-    transition: all 0.3s ease !important;
-    transform: translateX(-50%) !important;
-  }
-  .nav-btn:hover::after { width: 25% !important; }
 
-  /* Frosted Matrix Card Component */
+  /* Modern Solid Clean Surface Cards */
   .premium-card {
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.45) 0%, rgba(30, 41, 59, 0.25) 100%) !important;
-    backdrop-filter: blur(20px) !important;
-    -webkit-backdrop-filter: blur(20px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.04) !important;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6) !important;
-    transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 8px 24px -6px rgba(15, 23, 42, 0.05) !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
   }
   
-  .premium-card.glow-orange:hover {
-    transform: translateY(-4px) !important;
-    border-color: rgba(249, 115, 22, 0.3) !important;
-    box-shadow: 0 30px 60px -15px rgba(249, 115, 22, 0.25) !important;
-  }
-  
-  .premium-card.glow-blue:hover {
-    transform: translateY(-4px) !important;
-    border-color: rgba(56, 189, 248, 0.3) !important;
-    box-shadow: 0 30px 60px -15px rgba(56, 189, 248, 0.25) !important;
-  }
-
-  .premium-card.glow-emerald:hover {
-    transform: translateY(-4px) !important;
-    border-color: rgba(16, 185, 129, 0.3) !important;
-    box-shadow: 0 30px 60px -15px rgba(16, 185, 129, 0.25) !important;
+  .premium-card:hover {
+    box-shadow: 0 16px 36px -8px rgba(15, 23, 42, 0.09) !important;
+    border-color: #cbd5e1 !important;
   }
   
   .badge-btn {
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    transition: all 0.25s ease !important;
     cursor: pointer !important;
+    display: inline-block;
   }
   .badge-btn:hover {
     transform: translateY(-2px) !important;
-    filter: brightness(1.15);
+    filter: brightness(0.96);
   }
 
   .section-title-wrapper {
     display: flex;
     align-items: center;
-    gap: 16px;
-    margin-bottom: 36px;
+    gap: 14px;
+    margin-bottom: 28px;
   }
   .section-bar {
     width: 4px;
-    height: 28px;
-    background: linear-gradient(to bottom, #60a5fa, #3b82f6);
-    border-radius: 10px;
+    height: 26px;
+    border-radius: 4px;
   }
   
   .pill-metric {
     font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 6px 14px;
-    border-radius: 20px;
+    letter-spacing: 0.8px;
+    padding: 5px 12px;
+    border-radius: 16px;
     display: inline-block;
   }
 
+  /* Fixed Clean High-Contrast Usability Table */
   .audit-table-wrapper {
     width: 100% !important;
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch !important;
     border-radius: 12px !important;
-    background: rgba(15, 23, 42, 0.25) !important;
-    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
     margin-top: 20px !important;
   }
 
   .audit-table {
     width: 100% !important;
-    min-width: 750px !important;
+    min-width: 700px !important;
     border-collapse: collapse !important;
     font-size: 13.5px !important;
-    color: #cbd5e1 !important;
+    color: #334155 !important;
+    background: #ffffff !important;
   }
   .audit-table th {
     text-align: left !important;
-    padding: 16px !important;
-    background: rgba(255, 255, 255, 0.04) !important;
-    color: #ffffff !important;
-    font-weight: 600 !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding: 14px 18px !important;
+    background: #f8fafc !important;
+    color: #0f172a !important;
+    font-weight: 700 !important;
+    border-bottom: 1px solid #e2e8f0 !important;
   }
   .audit-table td {
-    padding: 16px !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    padding: 14px 18px !important;
+    border-bottom: 1px solid #f1f5f9 !important;
     line-height: 1.6 !important;
   }
 
@@ -346,15 +210,15 @@
     left: 0 !important;
     width: 100% !important;
     height: 100% !important;
-    background-color: rgba(3, 7, 18, 0.96) !important;
-    backdrop-filter: blur(24px) !important;
-    -webkit-backdrop-filter: blur(24px) !important;
+    background-color: rgba(15, 23, 42, 0.75) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
     z-index: 10000 !important;
     display: none !important;
     align-items: center !important;
     justify-content: center !important;
     opacity: 0 !important;
-    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    transition: opacity 0.25s ease !important;
   }
   
   .custom-modal-overlay.is-active { display: flex !important; opacity: 1 !important; }
@@ -375,8 +239,8 @@
     object-fit: contain !important;
     user-select: none !important;
     -webkit-user-drag: none !important;
-    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
-    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.7) !important;
+    transition: transform 0.25s ease !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3) !important;
     cursor: zoom-in !important;
   }
 
@@ -386,9 +250,9 @@
     height: 0 !important;
     padding-bottom: 45% !important;
     background-color: #000000 !important;
-    border-radius: 20px !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.9) !important;
+    border-radius: 16px !important;
+    border: 1px solid #334155 !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4) !important;
     overflow: hidden !important;
     position: relative !important;
   }
@@ -405,10 +269,10 @@
   .report-modal-window {
     width: 85vw !important;
     height: 85vh !important;
-    background-color: #111827 !important;
+    background-color: #ffffff !important;
     border-radius: 16px !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.8) !important;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25) !important;
     overflow: hidden !important;
     display: flex !important;
     flex-direction: column !important;
@@ -420,126 +284,52 @@
     width: 100% !important;
     height: 100% !important;
     border: none !important;
-    background: #111827 !important;
-  }
-
-  .mobile-pdf-fallback {
-    display: none;
-    padding: 20px;
-    text-align: center;
+    background: #ffffff !important;
   }
 
   .custom-modal-close-btn {
     position: fixed !important;
     top: 25px !important;
     right: 35px !important;
-    background: rgba(15, 23, 42, 0.7) !important;
-    border: 1px solid rgba(255,255,255,0.08) !important;
-    backdrop-filter: blur(8px) !important;
-    -webkit-backdrop-filter: blur(8px) !important;
-    color: #94a3b8 !important;
-    font-size: 24px !important;
-    width: 44px !important;
-    height: 44px !important;
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #0f172a !important;
+    font-size: 22px !important;
+    width: 40px !important;
+    height: 40px !important;
     border-radius: 50% !important;
     cursor: pointer !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    transition: all 0.2s ease !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
     z-index: 10001 !important;
   }
 
-  /* Mobile Media Queries */
+  /* Responsive Adjustments */
   @media (max-width: 768px) {
-    html, body, .main-content, .container-lg {
-      padding-left: 0px !important;
-      padding-right: 0px !important;
-      margin-left: 0px !important;
-      margin-right: 0px !important;
-    }
-    
-    body {
-      padding-top: 10px !important;
-      padding-bottom: 20px !important;
-    }
-    
-    .custom-portfolio-header, #who-i-am, #projects-overview, #case-study-laundrify, #case-study-1-ergochef, #case-study-2-elearn-ux-audit, #case-study-ezshop, #personal-challenges, #submission {
-      border-radius: 0px !important; 
-      padding-left: 16px !important;
-      padding-right: 16px !important;
-      box-sizing: border-box !important;
+    body { padding-top: 10px !important; padding-bottom: 20px !important; }
+    .custom-portfolio-header, #who-i-am, #projects-overview, #case-study-laundrify, #case-study-1-ergochef, #case-study-2-elearn-ux-audit, #case-study-ezshop {
+      border-radius: 14px !important; 
+      padding: 24px 16px !important;
       width: 100% !important;
     }
-
-    .video-modal-window {
-      width: 92vw !important;
-      padding-bottom: 56.25% !important;
-    }
-    
     .nav-container {
       justify-content: flex-start !important;
       overflow-x: auto !important;
       -webkit-overflow-scrolling: touch !important;
       border-radius: 0px !important;
       padding: 6px !important;
-      margin-bottom: 40px;
-      top: 0px;
+      margin-bottom: 30px;
     }
     .nav-container::-webkit-scrollbar { display: none !important; }
-    .nav-btn { padding: 12px 16px !important; }
-
-    .case-split-grid {
-      display: flex !important;
-      flex-direction: column !important;
-      gap: 16px !important;
-      width: 100% !important;
-    }
-    .case-split-grid > div {
-      width: 100% !important;
-      max-width: 100% !important;
-      box-sizing: border-box !important;
-    }
-    
-    .badge-btn-container {
-      width: 100% !important;
-      box-sizing: border-box !important;
-      padding: 0px !important;
-      display: flex !important;
-      justify-content: center !important;
-    }
-    .badge-btn-container > .badge-btn {
-      max-width: 100% !important;
-      width: 100% !important;
-    }
-
-    .mobile-pdf-fallback {
-      display: flex !important;
-      flex-direction: column !important;
-      align-items: center !important;
-      justify-content: center !important;
-    }
+    .nav-btn { padding: 8px 14px !important; font-size: 12px !important; }
   }
 </style>
 
-<!-- Canvas Backdrop -->
-<div class="space-canvas">
-  <div class="diagonal-shooting-star star-d1"></div>
-  <div class="diagonal-shooting-star star-d2"></div>
-  <div class="diagonal-shooting-star star-d3"></div>
-  <div class="diagonal-shooting-star star-d4"></div>
-  <div class="diagonal-shooting-star star-d5"></div>
-  <div class="diagonal-shooting-star star-d6"></div>
-  <div class="diagonal-shooting-star star-d7"></div>
-  <div class="diagonal-shooting-star star-d8"></div>
-  <div class="diagonal-shooting-star star-d9"></div>
-  <div class="diagonal-shooting-star star-d10"></div>
-  <div class="diagonal-shooting-star star-d11"></div>
-</div>
-
 <div class="main-content">
 
-  <!-- Header Area -->
+  <!-- Minimalist Hero Header (No Repo Title / No Awkward Lines / No Walkthrough Button) -->
   <div class="custom-portfolio-header">
     <h1 class="typewriter-title">
       <span class="name-word-group" id="js-type-name-1"></span> 
@@ -547,16 +337,9 @@
       <span class="name-word-group"><span id="js-type-name-3"></span><span id="js-cursor-name" class="blinking-cursor">_</span></span>
     </h1>
     <h2 id="js-type-tagline" class="typewriter-tagline"></h2>
-
-    <button onclick="openVideoModal('walkthrough')" class="subtle-walkthrough-btn">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M8 5v14l11-7z"/>
-      </svg>
-      Watch Portfolio Walkthrough
-    </button>
   </div>
 
-  <!-- Navigation Dock -->
+  <!-- Clean Navigation Dock (Challenges & Submission Removed) -->
   <div class="nav-container">
     <a href="#who-i-am" class="nav-btn">Profile</a>
     <a href="#projects-overview" class="nav-btn">Projects</a>
@@ -564,95 +347,101 @@
     <a href="#case-study-1-ergochef" class="nav-btn">ErgoChef+</a>
     <a href="#case-study-2-elearn-ux-audit" class="nav-btn">eLearn Audit</a>
     <a href="#case-study-ezshop" class="nav-btn">EZShop</a>
-    <a href="#personal-challenges" class="nav-btn">Challenges</a>
-    <a href="#submission" class="nav-btn">Submission</a>
   </div>
 
   <!-- Profile Section -->
-  <div id="who-i-am" style="padding-top: 20px; margin-bottom: 80px;">
+  <div id="who-i-am" style="padding-top: 10px; margin-bottom: 60px;">
     <div class="section-title-wrapper">
-      <div class="section-bar" style="background: linear-gradient(#38bdf8, #818cf8);"></div>
-      <h2 style="color: #ffffff; font-size: 28px; font-weight: 700; margin: 0; letter-spacing: -0.5px;">Introduction</h2>
+      <div class="section-bar" style="background: #2563eb;"></div>
+      <h2 style="color: #0f172a; font-size: 24px; font-weight: 700; margin: 0;">Profile Overview</h2>
     </div>
     
-    <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 28px;">
-      <div class="premium-card glow-blue" style="flex: 2; min-width: 320px; border-radius: 24px; padding: 40px; display: flex; gap: 35px; align-items: center; flex-wrap: wrap;">
-        <div style="position: relative; flex-shrink: 0;">
-          <div style="position: absolute; top: -5px; left: -4px; right: -4px; bottom: -4px; background: linear-gradient(135deg, #38bdf8, #818cf8); border-radius: 50%; z-index: 0; opacity: 0.3; filter: blur(4px);"></div>
-          <img src="https://raw.githubusercontent.com/malcolmjeremiah/malcolmjeremiah.github.io/main/WhatsApp%20Image%202026-07-03%20at%2010.14.22%20PM.jpeg" alt="Malcolm Jeremiah Richard" style="position: relative; width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 4px solid #020617; z-index: 1;" />
+    <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 24px;">
+      <div class="premium-card" style="flex: 2; min-width: 320px; border-radius: 16px; padding: 36px; display: flex; gap: 30px; align-items: center; flex-wrap: wrap;">
+        <div style="flex-shrink: 0;">
+          <img src="https://raw.githubusercontent.com/malcolmjeremiah/malcolmjeremiah.github.io/main/WhatsApp%20Image%202026-07-03%20at%2010.14.22%20PM.jpeg" alt="Malcolm Jeremiah Richard" style="width: 105px; height: 105px; border-radius: 50%; object-fit: cover; border: 3px solid #e2e8f0;" />
         </div>
         <div style="flex: 1; min-width: 240px;">
-          <p style="font-size: 16px; line-height: 1.8; color: #cbd5e1; margin: 0; font-weight: 400; letter-spacing: 0.2px;">
-            I am an <strong>Information Technology</strong> student specializing in software automation, scalable back-end services, and user-centered system workflows. Combining enterprise exposure from Maybank with practical full-stack deployment, my focus centers on building reliable, secure applications that solve operational bottlenecks while delivering clean, low-cognitive-load digital experiences.
+          <p style="font-size: 15.5px; line-height: 1.8; color: #334155; margin: 0; font-weight: 400;">
+            Recent <strong>Information Technology</strong> graduate with hands-on experience in full-stack web development, enterprise automation, and systems architecture gained through corporate internship work at Maybank. Practical background in designing scalable databases, scripting operational automation tools, and applying foundational networking and cybersecurity practices.
           </p>
         </div>
       </div>
 
-      <div class="premium-card glow-blue" style="flex: 1; min-width: 280px; border-radius: 24px; padding: 35px; display: flex; flex-direction: column; justify-content: center;">
-        <h4 style="margin-top: 0; margin-bottom: 16px; color: #475569; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Languages & Automation</h4>
-        <div style="margin-bottom: 24px; display: flex; flex-wrap: wrap; gap: 8px;">
-          <span style="font-size: 12px; font-weight: 600; background-color: rgba(255,255,255,0.03); color: #38bdf8; padding: 6px 14px; border-radius: 20px; border: 1px solid rgba(56, 189, 248, 0.15);">Python</span>
-          <span style="font-size: 12px; font-weight: 600; background-color: rgba(255,255,255,0.03); color: #e2e8f0; padding: 6px 14px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.05);">PHP</span>
-          <span style="font-size: 12px; font-weight: 600; background-color: rgba(255,255,255,0.03); color: #e2e8f0; padding: 6px 14px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.05);">JavaScript</span>
-          <span style="font-size: 12px; font-weight: 600; background-color: rgba(255,255,255,0.03); color: #e2e8f0; padding: 6px 14px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.05);">SQL</span>
-          <span style="font-size: 12px; font-weight: 600; background-color: rgba(255,255,255,0.03); color: #e2e8f0; padding: 6px 14px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.05);">Power Automate</span>
+      <div class="premium-card" style="flex: 1; min-width: 280px; border-radius: 16px; padding: 30px; display: flex; flex-direction: column; justify-content: center;">
+        <h4 style="margin-top: 0; margin-bottom: 14px; color: #64748b; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;">Core Stack & Scripting</h4>
+        <div style="margin-bottom: 20px; display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-size: 12px; font-weight: 600; background-color: #f1f5f9; color: #2563eb; padding: 5px 12px; border-radius: 16px; border: 1px solid #e2e8f0;">Python</span>
+          <span style="font-size: 12px; font-weight: 600; background-color: #f1f5f9; color: #334155; padding: 5px 12px; border-radius: 16px; border: 1px solid #e2e8f0;">PHP</span>
+          <span style="font-size: 12px; font-weight: 600; background-color: #f1f5f9; color: #334155; padding: 5px 12px; border-radius: 16px; border: 1px solid #e2e8f0;">JavaScript</span>
+          <span style="font-size: 12px; font-weight: 600; background-color: #f1f5f9; color: #334155; padding: 5px 12px; border-radius: 16px; border: 1px solid #e2e8f0;">SQL</span>
+          <span style="font-size: 12px; font-weight: 600; background-color: #f1f5f9; color: #334155; padding: 5px 12px; border-radius: 16px; border: 1px solid #e2e8f0;">Power Automate</span>
         </div>
-        <h4 style="margin-top: 0; margin-bottom: 16px; color: #475569; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Databases & Systems</h4>
+        <h4 style="margin-top: 0; margin-bottom: 14px; color: #64748b; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;">Databases & Tools</h4>
         <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-          <span style="font-size: 12px; font-weight: 600; background-color: rgba(255,255,255,0.03); color: #a5b4fc; padding: 6px 14px; border-radius: 20px; border: 1px solid rgba(129, 140, 248, 0.12);">MySQL</span>
-          <span style="font-size: 12px; font-weight: 600; background-color: rgba(255,255,255,0.03); color: #94a3b8; padding: 6px 14px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.05);">RESTful APIs</span>
-          <span style="font-size: 12px; font-weight: 600; background-color: rgba(255,255,255,0.03); color: #94a3b8; padding: 6px 14px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.05);">Git / GitHub</span>
-          <span style="font-size: 12px; font-weight: 600; background-color: rgba(255,255,255,0.03); color: #94a3b8; padding: 6px 14px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.05);">Cisco Packet Tracer</span>
+          <span style="font-size: 12px; font-weight: 600; background-color: #f1f5f9; color: #0284c7; padding: 5px 12px; border-radius: 16px; border: 1px solid #e2e8f0;">MySQL</span>
+          <span style="font-size: 12px; font-weight: 600; background-color: #f1f5f9; color: #334155; padding: 5px 12px; border-radius: 16px; border: 1px solid #e2e8f0;">RESTful APIs</span>
+          <span style="font-size: 12px; font-weight: 600; background-color: #f1f5f9; color: #334155; padding: 5px 12px; border-radius: 16px; border: 1px solid #e2e8f0;">Git / GitHub</span>
+          <span style="font-size: 12px; font-weight: 600; background-color: #f1f5f9; color: #334155; padding: 5px 12px; border-radius: 16px; border: 1px solid #e2e8f0;">Cisco Packet Tracer</span>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Projects Matrix Overview -->
-  <div id="projects-overview" style="padding-top: 20px; margin-bottom: 80px;">
+  <!-- Projects Directory Overview -->
+  <div id="projects-overview" style="padding-top: 10px; margin-bottom: 60px;">
     <div class="section-title-wrapper">
-      <div class="section-bar" style="background: linear-gradient(#10b981, #06b6d4);"></div>
-      <h2 style="color: #ffffff; font-size: 28px; font-weight: 700; margin: 0; letter-spacing: -0.5px;">Technical Projects Directory</h2>
+      <div class="section-bar" style="background: #0284c7;"></div>
+      <h2 style="color: #0f172a; font-size: 24px; font-weight: 700; margin: 0;">Featured Projects</h2>
     </div>
     
-    <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 28px;">
+    <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 20px;">
       
       <!-- Laundrify Card -->
-      <div class="premium-card glow-emerald" style="flex: 1; min-width: 280px; border-radius: 24px; padding: 36px; display: flex; flex-direction: column; justify-content: space-between; border-left: 3px solid #10b981 !important;">
+      <div class="premium-card" style="flex: 1; min-width: 260px; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; border-top: 4px solid #10b981 !important;">
         <div>
-          <span class="pill-metric" style="background-color: rgba(16, 185, 129, 0.08); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.15);">Final Year Project</span>
-          <h3 style="margin: 20px 0 14px 0; font-size: 22px; color: #ffffff; font-weight: 700; letter-spacing: -0.5px;">Laundrify: On-Demand Service Platform</h3>
-          <p style="font-size: 14.5px; line-height: 1.7; color: #94a3b8; margin: 0 0 30px 0;">Cloud-deployed full-stack booking system with RESTful API architecture, role-based access control, and dynamic pricing calculations.</p>
+          <span class="pill-metric" style="background-color: #ecfdf5; color: #059669; border: 1px solid #a7f3d0;">Final Year Project</span>
+          <h3 style="margin: 16px 0 10px 0; font-size: 19px; color: #0f172a; font-weight: 700;">Laundrify Platform</h3>
+          <p style="font-size: 14px; line-height: 1.6; color: #64748b; margin: 0 0 24px 0;">Cloud-deployed booking ecosystem with RESTful APIs, role-based auth, and automated operational pipelines.</p>
         </div>
-        <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 24px; display: flex; align-items: center; justify-content: space-between;">
-          <div style="font-size: 13px; color: #cbd5e1;"><strong>Stack:</strong> Python, MySQL, Cloud</div>
-          <a href="#case-study-laundrify" style="font-size: 14px; font-weight: 700; color: #6ee7b7; text-decoration: none; display: flex; align-items: center; gap: 4px;">Explore Platform →</a>
+        <div style="border-top: 1px solid #f1f5f9; padding-top: 16px;">
+          <a href="#case-study-laundrify" style="font-size: 13.5px; font-weight: 700; color: #059669; text-decoration: none;">View Details →</a>
         </div>
       </div>
 
       <!-- ErgoChef+ Card -->
-      <div class="premium-card glow-orange" style="flex: 1; min-width: 280px; border-radius: 24px; padding: 36px; display: flex; flex-direction: column; justify-content: space-between; border-left: 3px solid #f97316 !important;">
+      <div class="premium-card" style="flex: 1; min-width: 260px; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; border-top: 4px solid #ea580c !important;">
         <div>
-          <span class="pill-metric" style="background-color: rgba(249, 115, 22, 0.08); color: #fdba74; border: 1px solid rgba(249, 115, 22, 0.15);">Interactive Prototype</span>
-          <h3 style="margin: 20px 0 14px 0; font-size: 22px; color: #ffffff; font-weight: 700; letter-spacing: -0.5px;">ErgoChef+: AI Ergonomic Assistant</h3>
-          <p style="font-size: 14.5px; line-height: 1.7; color: #94a3b8; margin: 0 0 30px 0;">Context-aware kitchen guidance using posture detection models and progressive overlay notifications to reduce physical strain during cooking.</p>
+          <span class="pill-metric" style="background-color: #fff7ed; color: #ea580c; border: 1px solid #fed7aa;">Interactive Prototype</span>
+          <h3 style="margin: 16px 0 10px 0; font-size: 19px; color: #0f172a; font-weight: 700;">ErgoChef+ Assistant</h3>
+          <p style="font-size: 14px; line-height: 1.6; color: #64748b; margin: 0 0 24px 0;">Context-aware kitchen guidance using posture detection models and progressive overlay UI notifications.</p>
         </div>
-        <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 24px; display: flex; align-items: center; justify-content: space-between;">
-          <div style="font-size: 13px; color: #cbd5e1;"><strong>Role:</strong> Lead UI/Interaction</div>
-          <a href="#case-study-1-ergochef" style="font-size: 14px; font-weight: 700; color: #fdba74; text-decoration: none; display: flex; align-items: center; gap: 4px;">Explore Case →</a>
+        <div style="border-top: 1px solid #f1f5f9; padding-top: 16px;">
+          <a href="#case-study-1-ergochef" style="font-size: 13.5px; font-weight: 700; color: #ea580c; text-decoration: none;">View Details →</a>
         </div>
       </div>
       
       <!-- eLearn Card -->
-      <div class="premium-card glow-blue" style="flex: 1; min-width: 280px; border-radius: 24px; padding: 36px; display: flex; flex-direction: column; justify-content: space-between; border-left: 3px solid #38bdf8 !important;">
+      <div class="premium-card" style="flex: 1; min-width: 260px; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; border-top: 4px solid #0284c7 !important;">
         <div>
-          <span class="pill-metric" style="background-color: rgba(56, 189, 248, 0.08); color: #7dd3fc; border: 1px solid rgba(56, 189, 248, 0.15);">Heuristic Audit</span>
-          <h3 style="margin: 20px 0 14px 0; font-size: 22px; color: #ffffff; font-weight: 700; letter-spacing: -0.5px;">Learning Management UX Audit</h3>
-          <p style="font-size: 14.5px; line-height: 1.7; color: #94a3b8; margin: 0 0 30px 0;">Empirical usability audit identifying architectural friction, nested navigational loops, and key heuristic violations on university portals.</p>
+          <span class="pill-metric" style="background-color: #f0f9ff; color: #0284c7; border: 1px solid #bae6fd;">Heuristic Audit</span>
+          <h3 style="margin: 16px 0 10px 0; font-size: 19px; color: #0f172a; font-weight: 700;">eLearn UX Audit</h3>
+          <p style="font-size: 14px; line-height: 1.6; color: #64748b; margin: 0 0 24px 0;">Empirical usability audit identifying architectural friction and navigation loops on university portals.</p>
         </div>
-        <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 24px; display: flex; align-items: center; justify-content: space-between;">
-          <div style="font-size: 13px; color: #cbd5e1;"><strong>Role:</strong> Lead UX Auditor</div>
-          <a href="#case-study-2-elearn-ux-audit" style="font-size: 14px; font-weight: 700; color: #7dd3fc; text-decoration: none; display: flex; align-items: center; gap: 4px;">Explore Audit →</a>
+        <div style="border-top: 1px solid #f1f5f9; padding-top: 16px;">
+          <a href="#case-study-2-elearn-ux-audit" style="font-size: 13.5px; font-weight: 700; color: #0284c7; text-decoration: none;">View Details →</a>
+        </div>
+      </div>
+
+      <!-- EZShop Card -->
+      <div class="premium-card" style="flex: 1; min-width: 260px; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; border-top: 4px solid #6366f1 !important;">
+        <div>
+          <span class="pill-metric" style="background-color: #eef2ff; color: #4f46e5; border: 1px solid #c7d2fe;">Full-Stack Store</span>
+          <h3 style="margin: 16px 0 10px 0; font-size: 19px; color: #0f172a; font-weight: 700;">EZShop Platform</h3>
+          <p style="font-size: 14px; line-height: 1.6; color: #64748b; margin: 0 0 24px 0;">Relational e-commerce web platform engineered with session security, live inventory, and checkout logic.</p>
+        </div>
+        <div style="border-top: 1px solid #f1f5f9; padding-top: 16px;">
+          <a href="#case-study-ezshop" style="font-size: 13.5px; font-weight: 700; color: #4f46e5; text-decoration: none;">View Details →</a>
         </div>
       </div>
 
@@ -660,271 +449,165 @@
   </div>
 
   <!-- Detailed Project 1: Laundrify -->
-  <div id="case-study-laundrify" style="padding-top: 40px; margin-bottom: 80px;">
-    <div class="premium-card glow-emerald" style="border-radius: 28px; padding: 45px; box-shadow: 0 40px 80px -20px rgba(0,0,0,0.6);">
+  <div id="case-study-laundrify" style="padding-top: 10px; margin-bottom: 60px;">
+    <div class="premium-card" style="border-radius: 18px; padding: 36px;">
       
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 28px; margin-bottom: 36px; gap: 16px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; margin-bottom: 24px; gap: 14px;">
         <div>
-          <h2 style="color: #ffffff; font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.5px;">Laundrify – On-Demand Service Platform</h2>
-          <p style="color: #10b981; font-size: 13px; font-weight: 700; margin: 8px 0 0 0; text-transform: uppercase; letter-spacing: 1px;">Individual Final Year Capstone Project</p>
+          <h2 style="color: #0f172a; font-size: 24px; font-weight: 800; margin: 0;">Laundrify – On-Demand Service Platform</h2>
+          <p style="color: #059669; font-size: 12px; font-weight: 700; margin: 6px 0 0 0; text-transform: uppercase; letter-spacing: 1px;">Individual Final Year Project (FYP)</p>
         </div>
-        <span style="font-size: 12px; font-weight: 600; background-color: rgba(255,255,255,0.03); color: #cbd5e1; padding: 8px 20px; border-radius: 30px; border: 1px solid rgba(255, 255, 255, 0.08);">Full-Stack Engineering & Cloud Architecture</span>
+        <span style="font-size: 12px; font-weight: 600; background-color: #f8fafc; color: #475569; padding: 6px 16px; border-radius: 20px; border: 1px solid #e2e8f0;">Full-Stack & Cloud Architecture</span>
       </div>
       
-      <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.02) 0%, rgba(5, 150, 105, 0.05) 100%); border: 1px solid rgba(16, 185, 129, 0.12); border-radius: 16px; padding: 32px; margin-bottom: 40px;">
-        <h4 style="margin-top: 0; color: #6ee7b7; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px;">System Scope & Architectural Overview</h4>
-        <p style="font-size: 15px; line-height: 1.75; color: #cbd5e1; margin-bottom: 20px;">
-          <strong>The Problem:</strong> Traditional residential laundry services lack unified real-time dispatching, transparent pricing, and centralized status tracking. Customers encounter unpredictable turnaround windows, while service providers struggle with fragmented phone and messaging coordination.
-        </p>
-        <p style="font-size: 15px; line-height: 1.75; color: #cbd5e1; margin-bottom: 0;">
-          <strong>The Solution:</strong> Laundrify delivers an end-to-end web platform featuring structured relational schemas, secure RESTful endpoints, role-based access management (Client vs. Administrator), dynamic weight-tier cost calculation, and continuous deployment on modern cloud platforms.
-        </p>
-      </div>
+      <p style="font-size: 15px; line-height: 1.75; color: #334155; margin-bottom: 24px;">
+        Laundrify is an end-to-end on-demand service ecosystem designed to eliminate logistical bottlenecks in residential laundry workflows. Built from the ground up with modular <strong>RESTful APIs</strong>, relational data schemas, and role-based access control (RBAC), the platform ensures consistent state synchronizations across customer booking interfaces and administrative fulfillment dashboards.
+      </p>
 
-      <!-- 4-Pillar Engineering Architecture -->
-      <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 16px; margin-bottom: 45px;">
-        <div style="flex: 1; min-width: 200px; background-color: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.03); border-radius: 16px; padding: 24px;">
-          <strong style="color: #6ee7b7; font-size: 13px; display: block; margin-bottom: 8px; text-transform: uppercase;">1. REST API Architecture</strong>
-          <span style="font-size: 13px; line-height: 1.6; color: #94a3b8;">Modular endpoints handling user authentication, order creation, and status transitions.</span>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 30px;">
+        <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px;">
+          <strong style="color: #059669; font-size: 13px; display: block; margin-bottom: 6px;">RESTful Core</strong>
+          <span style="font-size: 13px; color: #64748b; line-height: 1.5; display: block;">Modular JSON endpoints enforcing sanitized payload structures and automated status updates.</span>
         </div>
-        <div style="flex: 1; min-width: 200px; background-color: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.03); border-radius: 16px; padding: 24px;">
-          <strong style="color: #6ee7b7; font-size: 13px; display: block; margin-bottom: 8px; text-transform: uppercase;">2. Database Modeling</strong>
-          <span style="font-size: 13px; line-height: 1.6; color: #94a3b8;">Indexed relational MySQL schemas enforcing strict data validation and transaction integrity.</span>
+        <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px;">
+          <strong style="color: #059669; font-size: 13px; display: block; margin-bottom: 6px;">Database Integrity</strong>
+          <span style="font-size: 13px; color: #64748b; line-height: 1.5; display: block;">Indexed relational MySQL schemas with transactional integrity checks preventing race conditions.</span>
         </div>
-        <div style="flex: 1; min-width: 200px; background-color: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.03); border-radius: 16px; padding: 24px;">
-          <strong style="color: #6ee7b7; font-size: 13px; display: block; margin-bottom: 8px; text-transform: uppercase;">3. Security & Validation</strong>
-          <span style="font-size: 13px; line-height: 1.6; color: #94a3b8;">Role-based permission gating, password hashing, and parameterized query validation.</span>
-        </div>
-        <div style="flex: 1; min-width: 200px; background-color: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.03); border-radius: 16px; padding: 24px;">
-          <strong style="color: #6ee7b7; font-size: 13px; display: block; margin-bottom: 8px; text-transform: uppercase;">4. Cloud CI/CD</strong>
-          <span style="font-size: 13px; line-height: 1.6; color: #94a3b8;">Automated deployment pipelines to ensure high availability and continuous version updates.</span>
+        <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px;">
+          <strong style="color: #059669; font-size: 13px; display: block; margin-bottom: 6px;">Role Gating & Auth</strong>
+          <span style="font-size: 13px; color: #64748b; line-height: 1.5; display: block;">Role-based permission gating to segregate customer booking views from administrative fulfillment.</span>
         </div>
       </div>
 
-      <!-- Interactive Artefacts Actions -->
-      <div style="background-color: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.03); border-radius: 20px; padding: 40px; margin-bottom: 45px; text-align: center;">
-        <h4 style="margin: 0 0 8px 0; color: #ffffff; font-size: 18px; font-weight: 700;">Project Artefacts & Technical Documentation</h4>
-        <p style="font-size: 14px; color: #64748b; margin: 0 0 32px 0;">Review the cloud database schemas, operational architecture diagrams, and complete engineering report.</p>
-        <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 16px; justify-content: center;">
-          <!-- Replace image path with your actual repo link -->
-          <div onclick="openUniversalImageModal('https://raw.githubusercontent.com/malcolmjeremiah/malcolmjeremiah.github.io/main/assets/laundrify-architecture.png', 'Laundrify System Architecture')" class="badge-btn" style="flex: 1; min-width: 220px; max-width: 280px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 16px 24px; border-radius: 10px; font-weight: 700; font-size: 13.5px; text-align: center; box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.3);">View Architecture Diagram</div>
-          <!-- Replace PDF path with your actual repo link -->
-          <div onclick="openUniversalReportModal('22078778_Assignment1.pdf')" class="badge-btn" style="flex: 1; min-width: 220px; max-width: 280px; background-color: #111827; color: #ffffff; padding: 16px 24px; border-radius: 10px; font-weight: 700; font-size: 13.5px; text-align: center; border: 1px solid rgba(255, 255, 255, 0.08);">Read Technical Report</div>
-        </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+        <div onclick="openUniversalImageModal('https://raw.githubusercontent.com/malcolmjeremiah/malcolmjeremiah.github.io/main/assets/laundrify-architecture.png', 'Laundrify System Architecture')" class="badge-btn" style="background: #059669; color: white; padding: 12px 22px; border-radius: 8px; font-weight: 600; font-size: 13px;">View Architecture Diagram</div>
+        <div onclick="openUniversalReportModal('22078778_Assignment1.pdf')" class="badge-btn" style="background: #ffffff; color: #0f172a; padding: 12px 22px; border-radius: 8px; font-weight: 600; font-size: 13px; border: 1px solid #cbd5e1;">Read Technical Report</div>
       </div>
 
     </div>
   </div>
 
   <!-- Detailed Project 2: ErgoChef+ -->
-  <div id="case-study-1-ergochef" style="padding-top: 20px; margin-bottom: 80px;">
-    <div class="premium-card glow-orange" style="border-radius: 28px; padding: 45px; box-shadow: 0 40px 80px -20px rgba(0,0,0,0.6);">
+  <div id="case-study-1-ergochef" style="padding-top: 10px; margin-bottom: 60px;">
+    <div class="premium-card" style="border-radius: 18px; padding: 36px;">
       
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 28px; margin-bottom: 36px; gap: 16px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; margin-bottom: 24px; gap: 14px;">
         <div>
-          <h2 style="color: #ffffff; font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.5px;">ErgoChef+ – AI Ergonomic Assistant</h2>
-          <p style="color: #f97316; font-size: 13px; font-weight: 700; margin: 8px 0 0 0; text-transform: uppercase; letter-spacing: 1px;">AI-Powered Kitchen Context Ecosystem</p>
+          <h2 style="color: #0f172a; font-size: 24px; font-weight: 800; margin: 0;">ErgoChef+ – AI Ergonomic Assistant</h2>
+          <p style="color: #ea580c; font-size: 12px; font-weight: 700; margin: 6px 0 0 0; text-transform: uppercase; letter-spacing: 1px;">AI-Powered Kitchen Context Ecosystem</p>
         </div>
-        <span style="font-size: 12px; font-weight: 600; background-color: rgba(255,255,255,0.03); color: #cbd5e1; padding: 8px 20px; border-radius: 30px; border: 1px solid rgba(255, 255, 255, 0.08);">Lead UI & Interaction Designer</span>
+        <span style="font-size: 12px; font-weight: 600; background-color: #f8fafc; color: #475569; padding: 6px 16px; border-radius: 20px; border: 1px solid #e2e8f0;">Lead UI & Interaction Designer</span>
       </div>
       
-      <div style="background: linear-gradient(135deg, rgba(249, 115, 22, 0.02) 0%, rgba(234, 88, 12, 0.05) 100%); border: 1px solid rgba(249, 115, 22, 0.12); border-radius: 16px; padding: 32px; margin-bottom: 45px;">
-        <h4 style="margin-top: 0; color: #fdba74; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px;">Project Overview & Context</h4>
-        <p style="font-size: 15px; line-height: 1.75; color: #cbd5e1; margin-bottom: 20px;">
-          <strong>The Problem:</strong> Cooking involves highly repetitive physical actions like bending, chopping, stirring, and prolonged standing that generate chronic musculoskeletal strain. Traditional smart kitchen appliances automate culinary tasks but completely disregard the user's posture.
-        </p>
-        <p style="font-size: 15px; line-height: 1.75; color: #cbd5e1; margin-bottom: 0;">
-          <strong>The Solution:</strong> ErgoChef+ introduces real-time posture sensing, non-intrusive progressive visual alerts, and contextual ergonomic reporting to correct posture habits without interrupting culinary workflow.
-        </p>
-      </div>
+      <p style="font-size: 15px; line-height: 1.75; color: #334155; margin-bottom: 24px;">
+        An AI-assisted ergonomic interface designed to mitigate chronic physical fatigue and musculoskeletal strain during extended culinary prep. ErgoChef+ integrates posture detection frameworks, non-intrusive alert HUDs, and telemetry reporting to build sustainable kitchen ergonomics.
+      </p>
 
-      <!-- 5-Phase Alignment -->
-      <h4 style="color: #ffffff; font-size: 12px; font-weight: 700; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 2px;">Design Process & Iterative Framework</h4>
-      <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 16px; margin-bottom: 45px;">
-        <div style="flex: 1; min-width: 180px; background-color: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.03); border-radius: 16px; padding: 24px;">
-          <strong style="color: #fdba74; font-size: 13px; display: block; margin-bottom: 10px; text-transform: uppercase;">1. User Research</strong>
-          <span style="font-size: 13px; line-height: 1.6; color: #94a3b8; display: block;">Conducted user surveys ($n=25$) and structured interviews to identify physical strain zones.</span>
-        </div>
-        <div style="flex: 1; min-width: 180px; background-color: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.03); border-radius: 16px; padding: 24px;">
-          <strong style="color: #fdba74; font-size: 13px; display: block; margin-bottom: 10px; text-transform: uppercase;">2. Ideation & Flow</strong>
-          <span style="font-size: 13px; line-height: 1.6; color: #94a3b8; display: block;">Mapped camera-to-screen interaction paths for hands-free kitchen environments.</span>
-        </div>
-        <div style="flex: 1; min-width: 180px; background-color: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.03); border-radius: 16px; padding: 24px;">
-          <strong style="color: #fdba74; font-size: 13px; display: block; margin-bottom: 10px; text-transform: uppercase;">3. Wireframing</strong>
-          <span style="font-size: 13px; line-height: 1.6; color: #94a3b8; display: block;">Positioned glanceable UI overlay alerts to keep peripheral vision uncluttered.</span>
-        </div>
-        <div style="flex: 1; min-width: 180px; background-color: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.03); border-radius: 16px; padding: 24px;">
-          <strong style="color: #fdba74; font-size: 13px; display: block; margin-bottom: 10px; text-transform: uppercase;">4. High-Fi Prototype</strong>
-          <span style="font-size: 13px; line-height: 1.6; color: #94a3b8; display: block;">Developed interactive prototype evaluating pose-correction HUD responsiveness.</span>
-        </div>
-        <div style="flex: 1; min-width: 180px; background-color: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.03); border-radius: 16px; padding: 24px;">
-          <strong style="color: #fdba74; font-size: 13px; display: block; margin-bottom: 10px; text-transform: uppercase;">5. Validation</strong>
-          <span style="font-size: 13px; line-height: 1.6; color: #94a3b8; display: block;">Measured user correction speed and minimal cognitive friction during testing.</span>
-        </div>
-      </div>
-
-      <!-- Artefacts -->
-      <div style="background-color: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.03); border-radius: 20px; padding: 40px; margin-bottom: 45px; text-align: center;">
-        <h4 style="margin: 0 0 8px 0; color: #ffffff; font-size: 18px; font-weight: 700;">Design Artefacts & Media</h4>
-        <p style="font-size: 14px; color: #64748b; margin: 0 0 32px 0;">Explore the live application interface, video walkthrough, and high-resolution design poster.</p>
-        <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 16px; justify-content: center;">
-          <a href="https://ergo-chef-journey.lovable.app/" target="_blank" class="badge-btn" style="flex: 1; min-width: 220px; max-width: 280px; background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); color: white; padding: 16px 28px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 13.5px; text-align: center; box-shadow: 0 10px 25px -5px rgba(234, 88, 12, 0.4);">Launch Live Prototype</a>
-          <div onclick="openVideoModal('ergochef')" class="badge-btn" style="flex: 1; min-width: 220px; max-width: 280px; background-color: #111827; color: #ffffff; padding: 16px 28px; border-radius: 10px; font-weight: 700; font-size: 13.5px; text-align: center; border: 1px solid rgba(255, 255, 255, 0.08);">Watch Video Demo</div>
-          <div onclick="openUniversalImageModal('https://github.com/malcolmjeremiah/malcolmjeremiah.github.io/blob/main/ErgoChef+%20(3).png?raw=true', 'ErgoChef+ Project Poster')" class="badge-btn" style="flex: 1; min-width: 220px; max-width: 280px; background-color: #374151; color: #e5e7eb; padding: 16px 28px; border-radius: 10px; font-weight: 700; font-size: 13.5px; text-align: center; border: 1px solid rgba(255, 255, 255, 0.05);">View Design Poster</div>
-        </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+        <a href="https://ergo-chef-journey.lovable.app/" target="_blank" class="badge-btn" style="background: #ea580c; color: white; padding: 12px 22px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 13px;">Launch Live Prototype</a>
+        <div onclick="openVideoModal('ergochef')" class="badge-btn" style="background: #ffffff; color: #0f172a; padding: 12px 22px; border-radius: 8px; font-weight: 600; font-size: 13px; border: 1px solid #cbd5e1;">Watch Video Demo</div>
+        <div onclick="openUniversalImageModal('https://github.com/malcolmjeremiah/malcolmjeremiah.github.io/blob/main/ErgoChef+%20(3).png?raw=true', 'ErgoChef+ Project Poster')" class="badge-btn" style="background: #ffffff; color: #0f172a; padding: 12px 22px; border-radius: 8px; font-weight: 600; font-size: 13px; border: 1px solid #cbd5e1;">View Project Poster</div>
       </div>
 
     </div>
   </div>
 
   <!-- Detailed Project 3: eLearn Heuristic Audit -->
-  <div id="case-study-2-elearn-ux-audit" style="padding-top: 20px; margin-bottom: 80px;">
-    <div class="premium-card glow-blue" style="border-radius: 28px; padding: 45px; box-shadow: 0 40px 80px -20px rgba(0,0,0,0.6);">
+  <div id="case-study-2-elearn-ux-audit" style="padding-top: 10px; margin-bottom: 60px;">
+    <div class="premium-card" style="border-radius: 18px; padding: 36px;">
       
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 28px; margin-bottom: 36px; gap: 16px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; margin-bottom: 24px; gap: 14px;">
         <div>
-          <h2 style="color: #ffffff; font-size: 26px; font-weight: 800; margin: 0; letter-spacing: -0.5px;">Institutional eLearn UX Audit</h2>
-          <p style="color: #38bdf8; font-size: 13px; font-weight: 700; margin: 8px 0 0 0; text-transform: uppercase; letter-spacing: 1px;">Academic Management Portal Usability Evaluation</p>
+          <h2 style="color: #0f172a; font-size: 24px; font-weight: 800; margin: 0;">Institutional eLearn UX Audit</h2>
+          <p style="color: #0284c7; font-size: 12px; font-weight: 700; margin: 6px 0 0 0; text-transform: uppercase; letter-spacing: 1px;">Academic Management Portal Usability Evaluation</p>
         </div>
-        <span style="font-size: 12px; font-weight: 600; background-color: rgba(255,255,255,0.03); color: #cbd5e1; padding: 8px 20px; border-radius: 30px; border: 1px solid rgba(255, 255, 255, 0.08);">Lead Usability Auditor</span>
+        <span style="font-size: 12px; font-weight: 600; background-color: #f8fafc; color: #475569; padding: 6px 16px; border-radius: 20px; border: 1px solid #e2e8f0;">Lead Usability Auditor</span>
       </div>
       
-      <div style="background: linear-gradient(135deg, rgba(56, 189, 248, 0.02) 0%, rgba(56, 189, 248, 0.03) 100%); border: 1px solid rgba(56, 189, 248, 0.08); border-radius: 16px; padding: 32px; margin-bottom: 40px;">
-        <h4 style="margin-top: 0; color: #7dd3fc; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px;">Audit Scope & Empirical Discovery</h4>
-        <p style="font-size: 15px; line-height: 1.75; color: #cbd5e1; margin-bottom: 0;">
-          Assessed academic portal architecture through rigorous heuristic evaluations and cognitive walkthroughs. Uncovered critical navigation loops, inconsistent status indicators, and cognitive overload points, formulating a centralized card directory layout to streamline student access.
-        </p>
-      </div>
-
-      <!-- Diagnostic Table -->
-      <div style="background-color: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.03); border-radius: 20px; padding: 35px; margin-bottom: 45px;">
-        <div style="border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 16px; margin-bottom: 20px;">
-          <h4 style="margin: 0; color: #ffffff; font-size: 17px; font-weight: 700;">Empirical Usability Diagnostic Log</h4>
-          <p style="font-size: 13px; color: #64748b; margin: 4px 0 0 0;">Identified defects categorized under Nielsen Norman Heuristics.</p>
-        </div>
-        
-        <div class="audit-table-wrapper">
-          <table class="audit-table">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Target Heuristic</th>
-                <th>Mechanics & Defect Description</th>
-                <th>Severity</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="color: #38bdf8; font-weight: 600;">V01</td>
-                <td>H2: System & Real World</td>
-                <td>Internal database keys and cryptic system strings exposed on primary portal headers.</td>
-                <td><span style="background: rgba(245, 158, 11, 0.1); color: #f59e0b; padding: 2px 8px; border-radius: 4px; font-size: 11px;">Severity 2</span></td>
-              </tr>
-              <tr>
-                <td style="color: #38bdf8; font-weight: 600;">V03</td>
-                <td>H4: Consistency Standards</td>
-                <td>Course directory filtering fails intermittently on upper-tier student accounts, returning blank containers.</td>
-                <td><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; padding: 2px 8px; border-radius: 4px; font-size: 11px;">Severity 3</span></td>
-              </tr>
-              <tr>
-                <td style="color: #38bdf8; font-weight: 600;">V04</td>
-                <td>H7: Flexibility & Efficiency</td>
-                <td>Workspace directories cluttered with completed, expired course cards lacking automated archive triggers.</td>
-                <td><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; padding: 2px 8px; border-radius: 4px; font-size: 11px;">Severity 3</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div style="background-color: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.03); border-radius: 20px; padding: 35px; text-align: center;">
-        <h4 style="margin: 0 0 8px 0; color: #ffffff; font-size: 18px; font-weight: 700;">Full Usability Report</h4>
-        <p style="font-size: 14px; color: #64748b; margin: 0 0 24px 0;">Access the comprehensive 24-page analytical report detailing empirical metrics and redesign prototypes.</p>
-        <div class="badge-btn-container">
-          <div onclick="openUniversalReportModal('22078778_Assignment1.pdf')" class="badge-btn" style="background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%); color: #020617 !important; padding: 14px 28px; border-radius: 10px; font-weight: 700; font-size: 14px; text-align: center; box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.3);">View Complete Report PDF</div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Detailed Project 4: EZShop -->
-  <div id="case-study-ezshop" style="padding-top: 20px; margin-bottom: 80px;">
-    <div class="premium-card glow-blue" style="border-radius: 28px; padding: 45px; box-shadow: 0 40px 80px -20px rgba(0,0,0,0.6);">
-      
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 28px; margin-bottom: 36px; gap: 16px;">
-        <div>
-          <h2 style="color: #ffffff; font-size: 26px; font-weight: 800; margin: 0; letter-spacing: -0.5px;">EZShop – E-Commerce Web Application</h2>
-          <p style="color: #818cf8; font-size: 13px; font-weight: 700; margin: 8px 0 0 0; text-transform: uppercase; letter-spacing: 1px;">Relational Web Platform Architecture</p>
-        </div>
-        <span style="font-size: 12px; font-weight: 600; background-color: rgba(255,255,255,0.03); color: #cbd5e1; padding: 8px 20px; border-radius: 30px; border: 1px solid rgba(255, 255, 255, 0.08);">Full-Stack Web Development</span>
-      </div>
-
-      <p style="font-size: 15px; line-height: 1.75; color: #cbd5e1; margin-bottom: 24px;">
-        Developed a fully responsive online retail store using <strong>PHP, MySQL, HTML5, and CSS3</strong>. Engineered indexed search queries, persistent user session handling, dynamic shopping cart logic, order confirmation pipelines, and reward point accounting.
+      <p style="font-size: 15px; line-height: 1.75; color: #334155; margin-bottom: 20px;">
+        Conducted an empirical usability evaluation on the institutional academic portal utilizing Nielsen Norman heuristics and cognitive walkthroughs to isolate structural navigation bottlenecks and multi-click journey loops.
       </p>
 
-      <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-        <!-- Replace with your actual ERD diagram image path -->
-        <div onclick="openUniversalImageModal('https://raw.githubusercontent.com/malcolmjeremiah/malcolmjeremiah.github.io/main/assets/ezshop-erd.png', 'EZShop Database Schema')" class="badge-btn" style="background-color: #111827; color: #cbd5e1; padding: 12px 24px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08); font-size: 13px; font-weight: 600;">View Entity Relationship Diagram (ERD)</div>
+      <!-- Clean High-Contrast Diagnostic Table -->
+      <div class="audit-table-wrapper">
+        <table class="audit-table">
+          <thead>
+            <tr>
+              <th>Violation ID</th>
+              <th>Heuristic Target</th>
+              <th>Failure Description</th>
+              <th>Severity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="color: #0284c7; font-weight: 700;">V01</td>
+              <td>H2: System & Real World</td>
+              <td>Raw internal database keys and obscure system parameters exposed on main portal headings.</td>
+              <td><span style="background: #fef3c7; color: #b45309; padding: 3px 8px; border-radius: 4px; font-weight: 700; font-size: 11px;">Severity 2</span></td>
+            </tr>
+            <tr>
+              <td style="color: #0284c7; font-weight: 700;">V03</td>
+              <td>H4: Consistency Standards</td>
+              <td>Course catalog filtering consistently drops active enrollment modules on upper-tier student accounts.</td>
+              <td><span style="background: #fee2e2; color: #b91c1c; padding: 3px 8px; border-radius: 4px; font-weight: 700; font-size: 11px;">Severity 3</span></td>
+            </tr>
+            <tr>
+              <td style="color: #0284c7; font-weight: 700;">V04</td>
+              <td>H7: Flexibility & Efficiency</td>
+              <td>Primary dashboards cluttered with archived, static modules lacking automated seasonal archival triggers.</td>
+              <td><span style="background: #fee2e2; color: #b91c1c; padding: 3px 8px; border-radius: 4px; font-weight: 700; font-size: 11px;">Severity 3</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-top: 24px;">
+        <div onclick="openUniversalReportModal('22078778_Assignment1.pdf')" class="badge-btn" style="background: #0284c7; color: white; padding: 12px 22px; border-radius: 8px; font-weight: 600; font-size: 13px;">View Complete Audit Report PDF</div>
       </div>
 
     </div>
   </div>
 
-  <!-- Personal Challenges Section -->
-  <div id="personal-challenges" style="padding-top: 20px; margin-bottom: 80px;">
-    <div class="section-title-wrapper">
-      <div class="section-bar" style="background: linear-gradient(#6366f1, #a855f7);"></div>
-      <h2 style="color: #ffffff; font-size: 28px; font-weight: 700; margin: 0; letter-spacing: -0.5px;">Engineering Challenges & Solutions</h2>
-    </div>
-    
-    <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 24px; margin-bottom: 24px;">
-      <div class="premium-card glow-blue" style="flex: 1; min-width: 320px; border-radius: 16px; padding: 32px;">
-        <strong style="color: #ffffff; font-size: 15px; display: block; margin-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 12px;">Markdown Styling Restrictions</strong>
-        <p style="font-size: 14px; line-height: 1.7; color: #94a3b8; margin: 0;">
-          <strong>Problem:</strong> Standard GitHub theme parsers stripped out traditional CSS layouts, breaking typography sizes and viewport parameters.
-          <br><br>
-          <strong>Resolution:</strong> Encapsulated structural layouts inside raw inline HTML wrapper components with explicit style assignments, bypassing markdown parser limitations.
-        </p>
+  <!-- Detailed Project 4: EZShop (Expanded Architecture & DB Specs) -->
+  <div id="case-study-ezshop" style="padding-top: 10px; margin-bottom: 60px;">
+    <div class="premium-card" style="border-radius: 18px; padding: 36px;">
+      
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; margin-bottom: 24px; gap: 14px;">
+        <div>
+          <h2 style="color: #0f172a; font-size: 24px; font-weight: 800; margin: 0;">EZShop – E-Commerce Web Application</h2>
+          <p style="color: #4f46e5; font-size: 12px; font-weight: 700; margin: 6px 0 0 0; text-transform: uppercase; letter-spacing: 1px;">Relational E-Commerce Platform Architecture</p>
+        </div>
+        <span style="font-size: 12px; font-weight: 600; background-color: #f8fafc; color: #475569; padding: 6px 16px; border-radius: 20px; border: 1px solid #e2e8f0;">Full-Stack PHP / MySQL</span>
       </div>
 
-      <div class="premium-card glow-blue" style="flex: 1; min-width: 320px; border-radius: 16px; padding: 32px;">
-        <strong style="color: #ffffff; font-size: 15px; display: block; margin-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 12px;">Cross-Terminal Git Merge Collisions</strong>
-        <p style="font-size: 14px; line-height: 1.7; color: #94a3b8; margin: 0;">
-          <strong>Problem:</strong> Updating media assets across testing workstations triggered tree conflicts and dropped local file references.
-          <br><br>
-          <strong>Resolution:</strong> Structured a strict upstream branch rebase workflow with dedicated asset tracking tags to maintain branch integrity.
-        </p>
+      <p style="font-size: 15px; line-height: 1.75; color: #334155; margin-bottom: 20px;">
+        EZShop is a transactional online retail web platform built natively using <strong>PHP, MySQL, HTML5, and CSS3</strong>. The system architecture emphasizes data normalization, authenticated transaction flows, and responsive UI components.
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 28px;">
+        <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px;">
+          <strong style="color: #4f46e5; font-size: 13px; display: block; margin-bottom: 6px;">Catalog Indexing & Search</strong>
+          <span style="font-size: 13px; color: #64748b; line-height: 1.5; display: block;">Structured SQL index modeling enabling rapid real-time product filtering, category isolation, and price range sorting.</span>
+        </div>
+        <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px;">
+          <strong style="color: #4f46e5; font-size: 13px; display: block; margin-bottom: 6px;">Session & Cart State</strong>
+          <span style="font-size: 13px; color: #64748b; line-height: 1.5; display: block;">Encrypted PHP session handling maintaining cart state persistence across page navigation and authenticated checkout transitions.</span>
+        </div>
+        <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px;">
+          <strong style="color: #4f46e5; font-size: 13px; display: block; margin-bottom: 6px;">Inventory & Points Engine</strong>
+          <span style="font-size: 13px; color: #64748b; line-height: 1.5; display: block;">Automated stock deduction routines and reward loyalty balance accounting triggered concurrently upon order confirmation.</span>
+        </div>
       </div>
 
-      <div class="premium-card glow-blue" style="flex: 1; min-width: 320px; border-radius: 16px; padding: 32px;">
-        <strong style="color: #ffffff; font-size: 15px; display: block; margin-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 12px;">Asset URL Path Standardization</strong>
-        <p style="font-size: 14px; line-height: 1.7; color: #94a3b8; margin: 0;">
-          <strong>Problem:</strong> Relative local paths resulted in missing previews and broken resource links across different viewing devices.
-          <br><br>
-          <strong>Resolution:</strong> Shifted media deliveries to raw absolute GitHub repository URLs, ensuring permanent, cache-safe visibility.
-        </p>
+      <div style="display: flex; gap: 12px;">
+        <div onclick="openUniversalImageModal('https://raw.githubusercontent.com/malcolmjeremiah/malcolmjeremiah.github.io/main/assets/ezshop-erd.png', 'EZShop Database Schema')" class="badge-btn" style="background: #ffffff; color: #0f172a; padding: 12px 22px; border-radius: 8px; font-weight: 600; font-size: 13px; border: 1px solid #cbd5e1;">View Database ERD Schema</div>
       </div>
-    </div>
-  </div>
 
-  <hr style="height: 1px; border: none; background-color: rgba(255,255,255,0.05); margin: 60px 0;">
-
-  <!-- Submission Verification -->
-  <div id="submission" style="padding-top: 20px; margin-bottom: 60px;">
-    <div class="premium-card glow-blue" style="border-radius: 20px; padding: 40px; display: flex; align-items: center; gap: 28px; flex-wrap: wrap;">
-      <div style="background-color: rgba(255,255,255,0.02); padding: 20px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.05); font-size: 22px;">📋</div>
-      <div style="flex: 1; min-width: 260px;">
-        <h3 style="color: #ffffff; font-size: 20px; font-weight: 700; margin: 0 0 10px 0;">Academic Integrity & Project Verification</h3>
-        <p style="font-size: 14.5px; color: #94a3b8; line-height: 1.7; margin: 0;">
-          This web portfolio is documented and maintained in full alignment with university academic standards. All listed architecture models, database schemas, and usability audit matrices represent authentic engineering work conducted by the student. Generative AI development tools were purposefully utilized for front-end interface scripting, styling optimization, and editorial refinement.
-        </p>
-      </div>
     </div>
   </div>
 
-  <!-- UNIVERSAL MODAL 1: Dynamic Image / Poster Lightbox -->
+  <!-- Dynamic Image Lightbox Modal -->
   <div id="universalImageModal" class="custom-modal-overlay" onclick="closeUniversalImageModalFromOverlay(event)">
     <button class="custom-modal-close-btn" onclick="closeUniversalImageModal()">&times;</button>
     <div class="custom-modal-window" id="imageModalWindow">
@@ -932,7 +615,7 @@
     </div>
   </div>
 
-  <!-- UNIVERSAL MODAL 2: Video Lightbox -->
+  <!-- Dynamic Video Lightbox Modal -->
   <div id="videoModal" class="custom-modal-overlay" onclick="closeVideoModalFromOverlay(event)">
     <button class="custom-modal-close-btn" onclick="closeVideoModal()">&times;</button>
     <div class="video-modal-window">
@@ -940,23 +623,19 @@
     </div>
   </div>
 
-  <!-- UNIVERSAL MODAL 3: Dynamic PDF Document Viewer -->
+  <!-- Dynamic PDF Document Lightbox Modal -->
   <div id="universalReportModal" class="custom-modal-overlay" onclick="closeUniversalReportModalFromOverlay(event)">
     <button class="custom-modal-close-btn" onclick="closeUniversalReportModal()">&times;</button>
     <div class="report-modal-window">
       <iframe id="universalPdfFrame" class="report-frame" src=""></iframe>
-      <div class="mobile-pdf-fallback">
-        <p style="color: #94a3b8; font-size: 14px; margin-bottom: 16px;">Mobile browsers may require opening documents directly:</p>
-        <a id="universalPdfDownloadLink" href="#" target="_blank" style="background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%); color: #020617; padding: 14px 28px; border-radius: 10px; font-weight: 700; font-size: 14px; text-decoration: none;">Open Document Directly</a>
-      </div>
     </div>
   </div>
 
 </div>
 
-<!-- JavaScript Engine: Typewriter & Modal Control -->
+<!-- JavaScript Core: Sequence & Lightbox Controls -->
 <script>
-  /* Typewriter Initialization */
+  /* Header Sequential Typewriter */
   const w1 = "MALCOLM";
   const w2 = "JEREMIAH";
   const w3 = "RICHARD";
@@ -973,23 +652,23 @@
     if (idx < w1.length) {
       c1.innerHTML += w1.charAt(idx);
       idx++;
-      setTimeout(typeSequence, 50);
+      setTimeout(typeSequence, 45);
     } 
     else if (idx < w1.length + w2.length) {
       if(idx === w1.length) { c1.innerHTML += "&nbsp;"; }
       c2.innerHTML += w2.charAt(idx - w1.length);
       idx++;
-      setTimeout(typeSequence, 50);
+      setTimeout(typeSequence, 45);
     } 
     else if (idx < w1.length + w2.length + w3.length) {
       if(idx === w1.length + w2.length) { c2.innerHTML += "&nbsp;"; }
       c3.innerHTML += w3.charAt(idx - (w1.length + w2.length));
       idx++;
-      setTimeout(typeSequence, 50);
+      setTimeout(typeSequence, 45);
     } 
     else {
       idx = 0;
-      setTimeout(typeTagline, 250);
+      setTimeout(typeTagline, 200);
     }
   }
 
@@ -997,28 +676,26 @@
     if (idx < taglineStr.length) {
       tagline.innerHTML += taglineStr.charAt(idx);
       idx++;
-      setTimeout(typeTagline, 35);
+      setTimeout(typeTagline, 30);
     }
   }
 
   window.addEventListener("DOMContentLoaded", () => {
-    setTimeout(typeSequence, 400);
+    setTimeout(typeSequence, 300);
   });
 
-  /* Modal Mechanics */
+  /* Lightbox Mechanics */
   const universalImageModal = document.getElementById('universalImageModal');
   const universalModalImg = document.getElementById('universalModalImg');
   const videoModal = document.getElementById('videoModal');
   const videoPlayerFrame = document.getElementById('videoPlayerFrame');
   const universalReportModal = document.getElementById('universalReportModal');
   const universalPdfFrame = document.getElementById('universalPdfFrame');
-  const universalPdfDownloadLink = document.getElementById('universalPdfDownloadLink');
 
-  /* Dynamic Image / Poster Handler */
   function openUniversalImageModal(imgSrc, altText) {
     resetZoom();
     universalModalImg.src = imgSrc;
-    universalModalImg.alt = altText || 'Technical Artefact';
+    universalModalImg.alt = altText || 'Artefact';
     universalImageModal.classList.add('is-active');
     document.body.style.overflow = 'hidden'; 
   }
@@ -1035,12 +712,9 @@
     }
   }
 
-  /* Dynamic Video Handler */
   function openVideoModal(videoType) {
     let embedUrl = "";
-    if (videoType === 'walkthrough') {
-      embedUrl = "https://www.youtube-nocookie.com/embed/JaEmmGhA464?autoplay=1";
-    } else if (videoType === 'ergochef') {
+    if (videoType === 'ergochef') {
       embedUrl = "https://www.youtube-nocookie.com/embed/-QOms8I-tbM?autoplay=1";
     }
     videoPlayerFrame.src = embedUrl;
@@ -1060,10 +734,8 @@
     }
   }
 
-  /* Dynamic PDF Report Handler */
   function openUniversalReportModal(pdfPath) {
-    universalPdfFrame.src = pdfPath + "#toolbar=1&navpanes=1&scrollbar=1";
-    universalPdfDownloadLink.href = pdfPath;
+    universalPdfFrame.src = pdfPath + "#toolbar=1&navpanes=0";
     universalReportModal.classList.add('is-active');
     document.body.style.overflow = 'hidden';
   }
@@ -1080,7 +752,6 @@
     }
   }
 
-  /* Global Keyboard Esc Handler */
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
       closeUniversalImageModal();
